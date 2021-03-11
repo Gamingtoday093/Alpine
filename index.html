@@ -10,6 +10,9 @@
 	<div class="header">
 		<div class="container">
 			<img src="styles\images\LogoS.png" alt="LogoS">
+			<button class="MenuButton" onclick="ShowMenu()">
+					<img src="styles\images\Menu.png" alt="Menu">
+			</button>
 		<ul>
 			<li>
 				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">HOME</a>
@@ -22,9 +25,33 @@
 			</li>
 		</ul>
 		</div>
+		<div class="mobilemenu" id="mobilemenu" style="display: none;">
+		<ul>
+			<li>
+				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">HOME</a>
+			</li>
+			<li>
+				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">STORE</a>
+			</li>
+			<li>
+				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">DISCORD</a>
+			</li>
+		</ul>
 	</div>
+	</div>
+	<!--Intro-->
 	<div class="intro">
 		<img src="styles\images\intro.svg" alt="intro">
 	</div>
+	<script>
+		var menu = document.getElementById("mobilemenu");
+		function ShowMenu() {
+			if (menu.style.display === "none") {
+				menu.style.display = "block";
+			} else {
+				menu.style.display = "none";
+			}
+		}
+	</script>
 </body>
 </html>
