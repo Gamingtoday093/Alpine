@@ -3,12 +3,24 @@
 /*Font - Boomer*/
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
+/*Animations*/
+@keyframes intro {
+	60% {opacity: 100%;}
+	100% {opacity: 0%; transform: scale(12); visibility: collapse;}
+}
+
+@keyframes hovheader {
+    0% {background-size: 100%;}
+    100% {background-size: 150000%; color: #cccccc;}
+}
+
 body {
 margin-top: 0px;
 margin-left: 0px;
 margin-right: 0px;
 }
 
+/*Intro*/
 .intro {
 	background-color: black;
 	color: black;
@@ -27,22 +39,15 @@ margin-right: 0px;
 	animation-fill-mode: forwards;
 }
 
-@keyframes intro {
-	60% {opacity: 100%;}
-	100% {opacity: 0%; transform: scale(10); visibility: collapse;}
-}
-
-@keyframes hovheader {
-    0% {background-size: 100%;}
-    100% {background-size: 150000%; color: #cccccc;}
-}
-
 .intro img {
+	object-fit: none;
+	background-color: black;
 	display: flex;
 	justify-content: center;
 	user-select: none;
 }
 
+/*Header*/
 .header {
 	width: 100%;
 	top: 0px;
@@ -53,15 +58,18 @@ margin-right: 0px;
 }
 
 .container {
+	max-width: 1350px;
 	padding: 0px 20px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
-	background-image: url('images/LogoSbackground2.png');
-	background-size: 172px 100px;
+	background-image: url('images/LogoSbackground3.png');
+	background-size: 184px 100px;
 	transition: background-size 0.5s;
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: -12px;
+	transition: padding 0.5s;
+	transition: background-position 0.5s;
 }
 
 .header img {
@@ -86,6 +94,10 @@ margin-right: 0px;
 	transition: padding 0.5s;
 }
 
+.header li {
+	position: relative;
+}
+
 .header a {
 	color: white;
 	background-image: linear-gradient(135deg, red 0%, #27283a 0.1%);
@@ -101,6 +113,21 @@ margin-right: 0px;
 	border-radius: 10px;
 	letter-spacing: 1px;
 	user-select: none;
+}
+
+.header a:hover {
+	animation: hovheader 0.25s ease;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: 1390px) {
+.container {
+	padding: 0px 42px;
+	background-position: left;
+	transition: padding 0.5s;
+	transition: background-position 0.5s;
+}
 }
 
 @media only screen and (max-width: 800px) {
@@ -173,13 +200,12 @@ margin-right: 0px;
 	width: 70px;
 	transition: width 0.5s;
 }
+.MenuButton {
+	visibility: visible!important;
+}
 }
 
-.header a:hover {
-	animation: hovheader 0.25s ease;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
+/*Mobilemenu*/
 
 .MenuButton:hover {
 	background-color: #252537;
@@ -187,22 +213,20 @@ margin-right: 0px;
 }
 
 .MenuButton {
+	visibility: collapse;
 	background-color: transparent;
 	border: solid 0;
 	border-radius: 10px;
 	outline: none;
 	margin: auto 0 auto auto;
-	padding: 0 0.75em;
+	padding: 0.1em;
 	height: fit-content;
+	transition: transform 0.25s!important;
 }
 
 .MenuButton:active {
 	background-color: #cccccc;
 	transition: background-color 0.025s;
-}
-
-.header li {
-	position: relative;
 }
 
 .mobilemenu {
@@ -245,6 +269,7 @@ margin-right: 0px;
 	width: inherit;
 }
 
+/*Global*/
 .a {
 	cursor: pointer;
 }

@@ -11,31 +11,31 @@
 	<div class="header">
 		<div class="container">
 			<img src="styles\images\LogoS.png" alt="LogoS">
-			<button class="MenuButton" onclick="ShowMenu()">
-					<img src="styles\images\Menu.png" alt="Menu">
+			<button class="MenuButton" id="MenuButton" onclick="ShowMenu()">
+					<img src="styles\images\Menu2.png" alt="Menu">
 			</button>
 		<ul>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">HOME</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">HOME</a>
 			</li>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">STORE</a>
 			</li>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">DISCORD</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">DISCORD</a>
 			</li>
 		</ul>
 		</div>
 		<div class="mobilemenu" id="mobilemenu" style="display: none;">
 		<ul>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">HOME</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">HOME</a>
 			</li>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">STORE</a>
 			</li>
 			<li>
-				<a href="file:///C:/Users/Axel/Documents/GitHub/Alpine/index.html">DISCORD</a>
+				<a href="https://gamingtoday093.github.io/Alpine/">DISCORD</a>
 			</li>
 		</ul>
 	</div>
@@ -45,12 +45,15 @@
 		<img src="styles\images\intro.svg" alt="intro">
 	</div>
 	<script>
+		var button = document.getElementById("MenuButton");
 		var menu = document.getElementById("mobilemenu");
 		function ShowMenu() {
 			if (menu.style.display === "none") {
 				menu.style.display = "block";
+				button.style.transform = "rotatez(-180deg)";
 			} else {
 				menu.style.display = "none";
+				button.style.transform = "rotatez(0deg)";
 			}
 		}
 	</script>
