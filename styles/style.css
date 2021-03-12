@@ -155,6 +155,8 @@ margin-right: 0px;
  	vertical-align: middle;
  	transition: width 0s;
  	cursor: pointer;
+ 	-webkit-tap-highlight-color: transparent;
+ 	user-select: none;
 }
 
 @media only screen and (max-width: 600px) {
