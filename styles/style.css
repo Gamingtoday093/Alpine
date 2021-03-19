@@ -18,7 +18,9 @@ body {
 margin-top: 0px;
 margin-left: 0px;
 margin-right: 0px;
-padding-top: 110px;
+padding-top: 100px;
+transition: padding 0.5s;
+/*background-color: #36393f;*/
 }
 
 /*Intro*/
@@ -124,8 +126,7 @@ padding-top: 110px;
 .container {
 	padding: 0px 42px;
 	background-position: left;
-	transition: padding 0.5s;
-	transition: background-position 0.5s;
+	transition: background-position 0.5s, padding 0.5s;
 }
 }
 
@@ -143,11 +144,25 @@ padding-top: 110px;
 	transition: width 0.5s;
 }
 body {
-	padding-top: 135px;
+	padding-top: 125px;
+	transition: padding 0.5s;
 }
 .container {
 	background-size: 215px 125px;
 	transition: background-size 0.5s;
+}
+.upper h1 {
+	font-size: 450%!important;
+	transition: font-size 0.5s;
+}
+.upper p {
+	font-size: 150%!important;
+	transition: font-size 0.5s;
+}
+.upper img {
+	max-width: 65%!important;
+	min-width: 320px;
+	transition: width 0.5s;
 }
 }
 
@@ -161,7 +176,7 @@ body {
  	user-select: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 695px) {
 .header ul {
 	visibility: collapse;
 	width: 0;
@@ -202,10 +217,18 @@ body {
 
 .MenuButton img {
 	width: 70px;
-	transition: width 0.5s;
+	transition: width 0.5s, transform 0.025s;
 }
 .MenuButton {
 	visibility: visible!important;
+}
+.upper h1 {
+	font-size: 400%!important;
+	transition: font-size 0.5s;
+}
+.upper p {
+	font-size: 125%!important;
+	transition: font-size 0.5s;
 }
 }
 
@@ -223,7 +246,7 @@ body {
 	border-radius: 10px;
 	outline: none;
 	margin: auto 0 auto auto;
-	padding: 0.1em;
+	padding: 2px;
 	height: fit-content;
 	transition: transform 0.25s!important;
 }
@@ -271,6 +294,57 @@ body {
 	letter-spacing: 1px;
 	user-select: none;
 	width: inherit;
+}
+
+/*content*/
+.content h1 {
+	font-family: 'Lalezar', sans-serif;
+	letter-spacing: 3px;
+	line-height: 1;
+}
+
+.content h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+.content p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.upper {
+	padding: 2em 0.5em;
+	background-image: url('https://media.discordapp.net/attachments/434425928635121684/822129345320583188/I_AM_AT.png?width=711&height=427');
+	background-position: center;
+    background-size: 300%;
+}
+
+.upper h1 {
+	color: white;
+	text-align: center;
+	font-size: 500%;
+	transition: font-size 0.5s;
+	margin: 0 auto;
+	text-shadow: 10px 10px 15px rgba(0,0,0,0.8);
+}
+
+.upper p {
+	color: white;
+	text-align: center;
+	font-size: 200%;
+	transition: font-size 0.5s;
+	margin: 0 auto;
+	text-shadow: 10px 10px 15px rgba(0,0,0,0.9);
+}
+
+.upper img {
+	width: 500px;
+	transition: width 0.5s!important;
+	display: block;
+	margin: 0 auto;
+}
+
+.lower article {
+	margin: 2.5em 1em 0px 1em;
 }
 
 /*Global*/

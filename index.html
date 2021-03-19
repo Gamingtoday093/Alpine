@@ -4,11 +4,27 @@
 	<title>Alpine</title>
 	<link rel="icon" href="styles/images/icon.png">
 	<link rel="stylesheet" href="styles/style.css">
+	<script src="https://kit.fontawesome.com/49146c74ae.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-	<p>small amount of trolling</p>
+	<div class="content">
+		<section class="upper">
+			<img src="styles\images\LogoH.png" alt="LogoH">
+			<h1>ALPINE</h1>
+			<p>Unturned's Biggest WW1 Server</p>
+			<!--TRAILER WILL GO HERE TOO-->
+		</section>
+		<section class="lower">
+			<article>
+				<h3>Take control over the battlefield in a variety of vehicles, weapons and more on this awesome War RP server fighting grandiose combined arms battles to gain control over the map!</h3>
+				<p>Alpine is successor to the famous Unturned server unTRUMPed. Although inheriting many of unTRUMPed's design decisions Alpine strives to improve the War RP formula in a number of ways for a better gameplay experience.</p>
+			</article>
+		</section>
+		<footer>
+			<!--footer-->
+		</footer>
+	</div>
 	<!--Header-->
 	<div class="header">
 		<div class="container">
@@ -16,18 +32,19 @@
 			<img src="styles\images\LogoS.png" alt="LogoS">
 			<!--Mobilemenu button-->
 			<button class="MenuButton" id="MenuButton" onclick="ShowMenu()">
-					<img src="styles\images\Menu2.png" alt="Menu">
+					<img src="styles\images\Menu.png" alt="Menu" id="MenuButtonImage" style="position: absolute;">
+					<img src="styles\images\Menu2.png" alt="Menu" id="MenuButtonImage2" style="transform: scaleY(0);">
 			</button>
 		<!--Links-->
 		<ul>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">HOME</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-home"></i> HOME</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">DISCORD</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fab fa-discord"></i> DISCORD</a>
 			</li>
 		</ul>
 		</div>
@@ -35,13 +52,13 @@
 		<div class="mobilemenu" id="mobilemenu" style="display: none;">
 		<ul>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">HOME</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-home"></i> HOME</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/">DISCORD</a>
+				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fab fa-discord"></i> DISCORD</a>
 			</li>
 		</ul>
 	</div>
@@ -53,14 +70,20 @@
 	<!--Mobilemenu button script-->
 	<script>
 		var button = document.getElementById("MenuButton");
+		var image = document.getElementById("MenuButtonImage");
+		var imageX = document.getElementById("MenuButtonImage2");
 		var menu = document.getElementById("mobilemenu");
 		function ShowMenu() {
 			if (menu.style.display === "none") {
 				menu.style.display = "block";
 				button.style.transform = "rotatez(-180deg)";
+				image.style.transform = "scaleY(0)";
+				imageX.style.transform = "scaleY(1)";
 			} else {
 				menu.style.display = "none";
 				button.style.transform = "rotatez(0deg)";
+				image.style.transform = "scaleY(1)";
+				imageX.style.transform = "scaleY(0)";
 			}
 		}
 	</script>
