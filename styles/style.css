@@ -307,18 +307,16 @@ body {
 
 .content h2 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-top: 0;
 	color: white;
-	text-shadow: 10px 12px 3px rgba(0,0,0,0.5);
 }
 
 .content p {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	margin-bottom: 0;
 	color: white;
-	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
 }
 
 .upper {
@@ -356,18 +354,26 @@ body {
 }
 
 .lower article {
-	padding: 4em 8em 0em 8em;
+	padding: 4em 8em 2em 8em;
 	display: flex;
 	justify-content: center;
-	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777690856999/1E8DC5874FF8155B211FE58EA767577D306EEEB4/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
 	background-position: center;
 	background-attachment: fixed;
     background-size: cover;
 }
 
+#Article1 {
+	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777690856999/1E8DC5874FF8155B211FE58EA767577D306EEEB4/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+}
+
+#Article2 {
+	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777689218527/1401302F48C27998098B44F64DCF7E68248AC459/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+}
+
 .description {
-	margin-left: 2em;
+	margin: auto 0;
 	padding: 1em;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 article img {
