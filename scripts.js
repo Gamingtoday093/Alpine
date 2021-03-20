@@ -1,3 +1,4 @@
+// Mobile Menu Script
 var button = document.getElementById("MenuButton");
 var image = document.getElementById("MenuButtonImage");
 var imageX = document.getElementById("MenuButtonImage2");
