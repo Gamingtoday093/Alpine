@@ -15,9 +15,7 @@
 }
 
 body {
-margin-top: 0px;
-margin-left: 0px;
-margin-right: 0px;
+margin: 0;
 padding-top: 100px;
 transition: padding 0.5s;
 /*background-color: #36393f;*/
@@ -309,14 +307,21 @@ body {
 
 .content h2 {
 	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	margin-top: 0;
+	color: white;
+	text-shadow: 10px 12px 3px rgba(0,0,0,0.5);
 }
 
 .content p {
 	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 0;
+	color: white;
+	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
 }
 
 .upper {
-	margin-bottom: 4em;
 	padding: 2em 0.5em;
 	background-image: url('images/background.png');
 	background-position: center;
@@ -351,7 +356,24 @@ body {
 }
 
 .lower article {
-	margin: 2.5em 1em 0px 1em;
+	padding: 4em 8em 0em 8em;
+	display: flex;
+	justify-content: center;
+	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777690856999/1E8DC5874FF8155B211FE58EA767577D306EEEB4/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+	background-position: center;
+	background-attachment: fixed;
+    background-size: cover;
+}
+
+.description {
+	margin-left: 2em;
+	padding: 1em;
+}
+
+article img {
+	width: 35em;
+	margin: auto 0;
+	display: block;
 }
 
 /*Global*/
