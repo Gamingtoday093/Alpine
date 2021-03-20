@@ -161,7 +161,7 @@ body {
 }
 .upper img {
 	max-width: 65%!important;
-	min-width: 320px;
+	min-width: 300px;
 	transition: width 0.5s;
 }
 }
@@ -303,7 +303,7 @@ body {
 	line-height: 1;
 }
 
-.content h3 {
+.content h2 {
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -312,10 +312,11 @@ body {
 }
 
 .upper {
+	margin-bottom: 4em;
 	padding: 2em 0.5em;
-	background-image: url('https://media.discordapp.net/attachments/434425928635121684/822129345320583188/I_AM_AT.png?width=711&height=427');
-	background-position: center;
-    background-size: 300%;
+	background-image: url('images/background.png');
+	background-position: 50% 50%;
+    background-size: cover;
 }
 
 .upper h1 {
@@ -324,7 +325,7 @@ body {
 	font-size: 500%;
 	transition: font-size 0.5s;
 	margin: 0 auto;
-	text-shadow: 10px 10px 15px rgba(0,0,0,0.8);
+	text-shadow: 10px 12px 3px rgba(0,0,0,0.5);
 }
 
 .upper p {
@@ -333,7 +334,7 @@ body {
 	font-size: 200%;
 	transition: font-size 0.5s;
 	margin: 0 auto;
-	text-shadow: 10px 10px 15px rgba(0,0,0,0.9);
+	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
 }
 
 .upper img {
