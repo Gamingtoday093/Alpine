@@ -427,6 +427,7 @@ article img {
 
 .wave {
 	width: 100%;
+	user-select: none;
 }
 
 .wave img {
