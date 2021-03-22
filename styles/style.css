@@ -430,8 +430,15 @@ article img {
 	width: 40%;
 }
 
+.overlay {
+	position: absolute;
+	height: 1em;
+	transform: translateY(-0.5em);
+	width: 100%;
+	background-color: var(--blu);
+}
+
 .wave {
-	margin: -1px 0;
 	width: 100%;
 }
 
@@ -547,6 +554,7 @@ article img {
 }
 
 .divisions li img {
+	filter: drop-shadow(2px 4px 6px black);
 	width: 100%;
 	position: absolute;
 	top: 50%;
@@ -554,8 +562,12 @@ article img {
 	transform: translate(-50%, -50%);
 }
 
-.front p {
-	border-bottom: solid 2px white;
+.front h1 {
+	font-size: 250%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
