@@ -5,6 +5,7 @@
 	<link rel="icon" href="styles/images/icon.png">
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="https://kit.fontawesome.com/49146c74ae.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -17,18 +18,74 @@
 		</section>
 		<section class="lower">
 			<article id="Article1">
-				<img src="https://media.discordapp.net/attachments/545016765885972494/822820993466630154/FokkerDRI_Render2.png?width=608&height=427" alt="Textimage1">
-				<div class="description">
-					<h2>Take control over the battlefield in a variety of vehicles, weapons and more on this awesome War RP server fighting grandiose combined arms battles to gain control over the map!</h2>
-					<p>Alpine is successor to the famous Unturned server unTRUMPed. Although inheriting many of unTRUMPed's design decisions Alpine strives to improve the War RP formula in a number of ways for a better gameplay experience.</p>
+				<div class="max-width">
+					<img src="https://media.discordapp.net/attachments/545016765885972494/822820993466630154/FokkerDRI_Render2.png?width=608&height=427" alt="Textimage1">
+					<div class="description">
+						<h2>Take control over the battlefield in a variety of vehicles, weapons and more on this awesome War RP server fighting grandiose combined arms battles to gain control over the map!</h2>
+						<div class="seperator"><br></div>					
+						<p>Alpine is successor to the famous Unturned server unTRUMPed. Although inheriting many of unTRUMPed's design decisions Alpine strives to improve the War RP formula in a number of ways for a better gameplay experience.</p>
+					</div>
 				</div>
 			</article>
-			<article id="Article2">
-				<div class="description">
-					<h2>Take control over the battlefield in a variety of vehicles, weapons and more on this awesome War RP server fighting grandiose combined arms battles to gain control over the map!</h2>
-					<p>Alpine is successor to the famous Unturned server unTRUMPed. Although inheriting many of unTRUMPed's design decisions Alpine strives to improve the War RP formula in a number of ways for a better gameplay experience.</p>
+			<div class="wave">
+				<img src="styles\images\wave2.svg" alt="wave2">
+			</div>
+			<div class="divisions">
+				<div class="max-width">
+					<h1>PLAYABLE DIVISIONS</h1>
+					<div class="seperator"><br></div>
+					<ul>
+						<li>
+							<div class="front">
+								<img src="https://media.discordapp.net/attachments/545016765885972494/822820993466630154/FokkerDRI_Render2.png?width=608&height=427" alt="Textimage1">
+								<p>Army</p>
+							</div>
+							<div class="back">
+								<p><b>Get close and personal with the enemy either as a Solider or Medic!</b><br>Get access to deadly firearms and lead the other divisions to victory!</p>
+							</div>
+						</li>
+						<li>
+							<div class="front">
+								<img src="https://media.discordapp.net/attachments/545016765885972494/822839399913226310/Mark_IV_Render2.png?width=759&height=427" alt="Textimage1">
+								<p>Armoured</p>
+							</div>
+							<div class="back">
+								<p><b>Ready the weapons and charge the enemy with a steel beast!</b><br>Protect yourself from small arms fire and mow down incoming infantry!</p>
+							</div>
+						</li>	
+						<li>
+							<div class="front">
+								<img src="https://media.discordapp.net/attachments/545016765885972494/822820993466630154/FokkerDRI_Render2.png?width=608&height=427" alt="Textimage1">
+								<p>Airforce</p>
+							</div>
+							<div class="back">
+								<p><b>Dominate the sky in a variety of exciting WW1 aircraft!</b><br>Carry out bombing missions and scout ahead while defending your allied troops from incoming air attacks!</p>
+							</div>
+						</li>	
+						<li>
+							<div class="front">
+								<img src="https://media.discordapp.net/attachments/545016765885972494/822820993466630154/FokkerDRI_Render2.png?width=608&height=427" alt="Textimage1">
+								<p>Navy</p>
+							</div>
+							<div class="back">
+								<p><b>Rule the sea with an armada of ships!</b><br>Experience how it is to play large vessles with increadible firepower!</p>
+							</div>
+						</li>					
+					</ul>
 				</div>
-				<img src="https://media.discordapp.net/attachments/545016765885972494/822839399913226310/Mark_IV_Render2.png?width=759&height=427" alt="LogoH">
+			</div>
+			<div class="wave" id="flip">
+				<img src="styles\images\wave.svg" alt="wave">
+			</div>
+			<article id="Article2">
+				<div class="max-width">
+					<div class="description">
+						<h2>Take control over the battlefield in a variety of vehicles, weapons and more on this awesome War RP server fighting grandiose combined arms battles to gain control over the map!</h2>
+						<div class="seperator"><br></div>
+						<p>Alpine is successor to the famous Unturned server unTRUMPed. Although inheriting many of unTRUMPed's design decisions Alpine strives to improve the War RP formula in a number of ways for a better gameplay experience.</p>
+					</div>
+					<img src="https://media.discordapp.net/attachments/545016765885972494/822839399913226310/Mark_IV_Render2.png?width=759&height=427" alt="LogoH">
+				</div>
 			</article>			
 		</section>
 		<footer>
@@ -78,6 +135,10 @@
 		<img src="styles\images\intro.svg" alt="intro">
 	</div>
 </body>
-	<!--Scripts are loaded after all the elements are loaded-->
+	<!--Website scripts are loaded after all the elements are loaded-->
 	<script src="scripts.js"></script>
+	<script>
+		window.addEventListener("resize", resizewin);
+		window.onresize = resizewin();
+	</script>
 </html>
