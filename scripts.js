@@ -21,6 +21,7 @@ if (menu.style.display === "none") {
 // Article Mobile Friendly Script
 var article1 = document.getElementById("Article1");
 var article2 = document.getElementById("Article2");
+
 function resizewin() {
 if($(window).width() <= 1048) {
 	article1.style.display = "block";

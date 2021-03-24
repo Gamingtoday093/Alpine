@@ -14,11 +14,20 @@
     100% {background-size: 150000%; color: #cccccc;}
 }
 
+/*Variables*/
+:root {
+	--transform1: 0deg;
+	--transform2: 180deg;
+	--blu: #27283a;
+	--dkblu: #252537;
+	--gry: #36393f;
+}
+
 body {
 margin: 0;
 padding-top: 100px;
 transition: padding 0.5s;
-/*background-color: #27283a;*/
+background-color: var(--gry);
 }
 
 /*Intro*/
@@ -55,6 +64,7 @@ transition: padding 0.5s;
 	margin: 0px;
 	background-color: #27283a;
 	position: absolute;
+	overflow: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -120,68 +130,118 @@ transition: padding 0.5s;
 	animation-fill-mode: forwards;
 }
 
+.logolink {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	transform: initial!important;
+	background-image: none!important;
+	padding: 0!important;
+	margin: 0;
+}
+
 @media only screen and (min-width: 1390px) {
 .container {
 	padding: 0px 42px;
 	background-position: left;
 	transition: background-position 0.5s, padding 0.5s;
 }
+
 .upper {
 	background-position: 50% -100px!important;
 	transition: background-position 0.5s;
 }
+
 article img {
 	min-width: 35em;
 	max-width: 35em;
 	width: 35em;
 }
+
+.divisions li {
+	width: 20em!important;
+	height: 15em!important;
+	transition: width 0.5s, height 0.5s;
+}
+
+.divisions .max-width {
+	max-width: fit-content!important;
+	transition: max-width 0.5s;
+}
+
 }
 
 @media only screen and (max-width: 916px) {
 .header ul {
 	padding: 0px 30px 0px 15px;
 	transition: padding 0.5s;
-} 
+}
+
 .header a {
 	font-size: 130%;
 	transition: font-size 0.5s;
 }
+
 .header img {
 	width: 125px;
 	transition: width 0.5s;
 }
+
+.logolink {
+	width: 125px;
+	height: 125px;
+}
+
 body {
 	padding-top: 125px;
 	transition: padding 0.5s;
 }
+
 .container {
 	background-size: 215px 125px;
 	transition: background-size 0.5s;
 }
+
 .upper h1 {
 	font-size: 450%!important;
 	transition: font-size 0.5s;
 }
+
 .upper p {
 	font-size: 150%!important;
 	transition: font-size 0.5s;
 }
+
 .upper img {
 	max-width: 65%!important;
 	min-width: 290px;
 	transition: width 0.5s;
 }
+
 article img {
 	min-width: 290px;
 }
-.lower article {
+
+#Article1 {
 	padding: 4em 4em 2em 4em!important;
 	transition: padding 0.5s;
 }
+
+#Article2 {
+	padding: 2em 4em 4em 4em!important;
+	transition: padding 0.5s;
+}
+
+footer .max-width {
+	padding: 1em 5em 1em 5em!important;
+	transition: padding 0.5s;
+}
+
 .divisions {
 	padding: 1em 3em 1em 3em!important;
 	transition: padding 0.5s;
 }
+
 }
 
 .MenuButton img {
@@ -210,6 +270,11 @@ article img {
 	padding: 0;
 	margin: 0;
 	transition: all 0s;
+}
+
+.logolink {
+	width: 125px!important;
+	height: 125px!important;
 }
 
 .mobilemenu ul {
@@ -248,8 +313,16 @@ article img {
 	font-size: 125%!important;
 	transition: font-size 0.5s;
 }
-.lower article {
+#Article1 {
 	padding: 4em 0.1em 2em 0.1em!important;
+	transition: padding 0.5s;
+}
+#Article2 {
+	padding: 2em 0.1em 4em 0.1em!important;
+	transition: padding 0.5s;
+}
+footer .max-width {
+	padding: 1em 1.1em 1em 1.1em!important;
 	transition: padding 0.5s;
 }
 .divisions {
@@ -323,6 +396,10 @@ article img {
 }
 
 /*content*/
+.content {
+	overflow: hidden;
+}
+
 .content h1 {
 	font-family: 'Lalezar', sans-serif;
 	letter-spacing: 3px;
@@ -380,7 +457,6 @@ article img {
 
 /*articles*/
 .lower article {
-	padding: 4em 8em 2em 8em;
 	transition: padding 0.5s;
 	display: flex;
 	justify-content: center;
@@ -391,10 +467,12 @@ article img {
 
 #Article1 {
 	background-image: url('images/background3.png');
+	padding: 4em 8em 2em 8em;
 }
 
 #Article2 {
 	background-image: url('images/background2.png');
+	padding: 2em 8em 4em 8em;
 }
 
 .description {
@@ -410,6 +488,42 @@ article img {
 	display: block;
 }
 
+#Article2 h2 {
+	font-size: 2em!important;
+}
+
+#Article2 p {
+	margin-bottom: 1em;
+}
+
+article a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
+	margin: 0;
+	color: white;
+	line-height: 2;
+	white-space: nowrap;
+	padding: 0.5em;
+	border: solid 3px;
+	border-radius: 30px;
+	transition: background-color 0.25s, color 0.25s;
+	user-select: none;
+	text-decoration: none;
+}
+
+article a:hover {
+	background-color: rgba(0, 0, 0, 0.35);
+	transition: background-color 0.25s, color 0.25s;
+	color: #cccccc;
+}
+
+article i {
+	font-size: 1.5em;
+	vertical-align: middle;
+	transform: translateY(-10%);
+}
+
+/*seperator*/
 .seperator {
 	margin-top: 0.5em; 
 	line-height: 1;
@@ -417,6 +531,14 @@ article img {
 	width: 40%;
 }
 
+footer .seperator {
+	min-width: 5em!important;
+	width: 10%!important;
+	border-color: #cccccc!important;
+}
+
+/*wave*/
+/*(Overlay is to coverup a 1px bug with .svgs)*/
 .overlay {
 	position: absolute;
 	height: 1em;
@@ -436,6 +558,7 @@ article img {
 	background-position: center;
 	background-attachment: fixed;
     background-size: cover;
+    max-height: 6em;
 }
 
 #flip {
@@ -447,9 +570,23 @@ article img {
 
 }
 
+/*max-width: 1350px*/
 .max-width {
 	max-width: 1350px;
 	display: inherit;
+}
+
+.divisions .max-width {
+	margin: auto;
+	transition: max-width 0.5s;
+}
+
+footer .max-width {
+	padding: 1em 9em 1em 9em;
+	transition: padding 0.5s;
+	justify-content: left;
+	text-align: left;
+	margin: 0 auto;
 }
 
 /*divisions*/
@@ -492,47 +629,7 @@ article img {
 	margin: 1em;
 	transform-style: preserve-3d;
 	perspective: 1000px;
-}
-
-:root {
-	--transform1: 0deg;
-	--transform2: 180deg;
-	--blu: #27283a;
-	--dkblu: #252537;
-	--gry: #36393f;
-}
-
-.divisions li:hover {
-	--transform1: -180deg;
-	--transform2: 0deg;
-}
-
-.front {
-	border: solid 0px;
-	border-radius: 30px;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	backface-visibility: hidden;
-	transition: transform 0.5s;
-	transform: rotateY(var(--transform1));
-}
-
-.back {
-	border: solid 0px;
-	border-radius: 30px;
-	background-color: #36393f;
-	background-image: linear-gradient(45deg, #27283a 5%, transparent);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	backface-visibility: hidden;
-	transition: transform 0.5s;
-	transform: rotateY(var(--transform2));
+	transition: width 0.5s, height 0.5s;
 }
 
 .divisions li p {
@@ -552,6 +649,25 @@ article img {
 	transform: translate(-50%, -50%);
 }
 
+.divisions li:hover {
+	--transform1: -180deg;
+	--transform2: 0deg;
+}
+
+/*Front of the division card*/
+.front {
+	border: solid 0px;
+	border-radius: 30px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transition: transform 0.5s;
+	transform: rotateY(var(--transform1));
+}
+
 .front h1 {
 	font-size: 250%;
 	position: absolute;
@@ -559,6 +675,22 @@ article img {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
+
+/*Back of the division card*/
+.back {
+	border: solid 0px;
+	border-radius: 30px;
+	background-color: #36393f;
+	background-image: linear-gradient(45deg, #27283a 5%, transparent);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transition: transform 0.5s;
+	transform: rotateY(var(--transform2));
 }
 
 .back p {
@@ -569,8 +701,58 @@ article img {
 	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
-.divisions .max-width {
-	margin: auto;
+footer {
+	background-color: var(--gry);
+	display: block;
+	margin: 0;
+	overflow: hidden;
+	box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer p {
+	color: #cccccc;
+	font-size: 1.25em;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	width: 40%
+}
+
+#footer {
+	background-color: var(--gry)!important;
+	background-image: none!important;
+}
+
+#footer img {
+	background-color: var(--gry)!important;
+	background-image: none!important;
+	max-height: 3em!important;
+}
+
+.legal {
+	display: flex;
+}
+
+.legal p {
+	width: initial!important;
+	padding: 0 0.25em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.legal a {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	color: #cccccc;
+	transition: color 0.25s;
+	text-decoration: none;
+}
+
+.legal a:hover {
+	color: whitesmoke;
+	transition: color 0.25s;
 }
 
 /*Global*/
