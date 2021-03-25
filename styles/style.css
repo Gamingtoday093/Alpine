@@ -207,7 +207,7 @@ body {
 	transition: font-size 0.5s;
 }
 
-.upper p {
+.upper h2 {
 	font-size: 150%!important;
 	transition: font-size 0.5s;
 }
@@ -290,6 +290,7 @@ footer .max-width {
 
 .mobilemenu {
 	visibility: visible!important;
+	height: 100%!important; /*for browsers that dont support fit-content*/
 	height: fit-content!important;
 	transition: background-color 0.25s;
 	background-color: #252537;
@@ -314,7 +315,7 @@ footer .max-width {
 	font-size: 400%!important;
 	transition: font-size 0.5s;
 }
-.upper p {
+.upper h2 {
 	font-size: 125%!important;
 	transition: font-size 0.5s;
 }
@@ -432,7 +433,7 @@ footer .max-width {
 /*upper*/
 .upper {
 	padding: 2em 0.5em;
-	background-image: url('images/background.png');
+	background-image: url('images/background.jpg');
 	background-position: center;
 	background-attachment: fixed;
     background-size: cover;
@@ -448,10 +449,11 @@ footer .max-width {
 	text-shadow: 10px 12px 3px rgba(0,0,0,0.5);
 }
 
-.upper p {
+.upper h2 {
 	color: white;
 	text-align: center;
 	font-size: 200%;
+	font-weight: normal;
 	transition: font-size 0.5s;
 	margin: 0 auto;
 	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
@@ -475,12 +477,12 @@ footer .max-width {
 }
 
 #Article1 {
-	background-image: url('images/background3.png');
+	background-image: url('images/background3.jpg');
 	padding: 4em 8em 2em 8em;
 }
 
 #Article2 {
-	background-image: url('images/background2.png');
+	background-image: url('images/background2.jpg');
 	padding: 2em 8em 4em 8em;
 }
 
@@ -493,6 +495,7 @@ footer .max-width {
 article img {
 	max-width: 35em;
 	width: 80%;
+	height: auto;
 	margin: auto;
 	display: block;
 }
@@ -538,6 +541,7 @@ article i {
 	line-height: 1;
 	border-top: solid 4px white;
 	width: 40%;
+	user-select: none;
 }
 
 footer .seperator {
@@ -677,7 +681,13 @@ footer .max-width {
 	transform: rotateY(var(--transform1));
 }
 
-.front h1 {
+.front h2 {
+	text-align: left;
+	transition: font-size 0.5s;
+	font-family: 'Lalezar', sans-serif;
+	letter-spacing: 3px;
+	line-height: 1;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 	font-size: 250%;
 	position: absolute;
 	top: 70%;
@@ -705,6 +715,7 @@ footer .max-width {
 .back p {
 	font-size: 1em!important;
 	line-height: 1.5;
+	width: inherit; /*for browsers that dont support fit-content*/
 	width: fit-content;
 	padding: 0.5em;
 	text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
@@ -737,6 +748,7 @@ footer p {
 	background-color: var(--gry)!important;
 	background-image: none!important;
 	max-height: 3em!important;
+	width: 100%;
 }
 
 .legal {
@@ -744,6 +756,7 @@ footer p {
 }
 
 .legal p {
+	width: auto!important;
 	width: initial!important;
 	padding: 0 0.25em;
 	font-size: 1em;
@@ -766,14 +779,6 @@ footer p {
 }
 
 /*Legal Pages*/
-.legalpn {
-	height: 100%;
-	color: white;
-	margin: 12.5% auto;
-	padding: 1em;
-	text-align: center;
-}
-
 .legalp {
 	color: white;
 	padding: 1em 9em 1em 9em;
@@ -789,12 +794,6 @@ footer p {
 	line-height: 1.5;
 	margin: 0.5em 0;
 }
-
-/*#legalf {
-	bottom: 0px;
-	position: absolute;
-	width: 100%;
-}*/
 
 /*Global*/
 a {
