@@ -237,6 +237,11 @@ footer .max-width {
 	transition: padding 0.5s;
 }
 
+.legalp {
+	padding: 1em 5em 1em 5em!important;
+	transition: padding 0.5s;
+}
+
 .divisions {
 	padding: 1em 3em 1em 3em!important;
 	transition: padding 0.5s;
@@ -322,6 +327,10 @@ footer .max-width {
 	transition: padding 0.5s;
 }
 footer .max-width {
+	padding: 1em 1.1em 1em 1.1em!important;
+	transition: padding 0.5s;
+}
+.legalp {
 	padding: 1em 1.1em 1em 1.1em!important;
 	transition: padding 0.5s;
 }
@@ -715,7 +724,8 @@ footer p {
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	width: 40%
+	width: 40%;
+	white-space: nowrap;
 }
 
 #footer {
@@ -754,6 +764,37 @@ footer p {
 	color: whitesmoke;
 	transition: color 0.25s;
 }
+
+/*Legal Pages*/
+.legalpn {
+	height: 100%;
+	color: white;
+	margin: 12.5% auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.legalp {
+	color: white;
+	padding: 1em 9em 1em 9em;
+	transition: padding 0.5s;
+	text-align: left;
+}
+
+.legalp h1 {
+	font-size: 2em;
+}
+
+.legalp p {
+	line-height: 1.5;
+	margin: 0.5em 0;
+}
+
+/*#legalf {
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+}*/
 
 /*Global*/
 a {
