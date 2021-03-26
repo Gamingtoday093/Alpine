@@ -567,7 +567,7 @@ footer .seperator {
 
 .wave img {
 	display: block;
-	background-image: url('images/background3.png');
+	background-image: url('images/background3.jpg');
 	background-position: center;
 	background-attachment: fixed;
     background-size: cover;
@@ -579,7 +579,7 @@ footer .seperator {
 }
 
 #flip img {
-	background-image: url('images/background2.png')!important;
+	background-image: url('images/background2.jpg')!important;
 
 }
 
