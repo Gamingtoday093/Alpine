@@ -83,6 +83,7 @@ background-color: var(--gry);
 
 .header img {
 	width: 100px;
+	height: auto;
 	user-select: none;
 	transition: width 0.5s;
 	padding-right: 75px;
@@ -461,6 +462,7 @@ footer .max-width {
 
 .upper img {
 	width: 500px;
+	height: auto;
 	transition: width 0.5s!important;
 	display: block;
 	margin: 0 auto;
@@ -656,6 +658,7 @@ footer .max-width {
 .divisions li img {
 	filter: drop-shadow(2px 4px 6px black);
 	width: 100%;
+	height: auto;
 	position: absolute;
 	top: 50%;
 	left: 50%;
