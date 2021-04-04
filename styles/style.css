@@ -64,7 +64,7 @@ background-color: var(--gry);
 	margin: 0px;
 	background-color: #27283a;
 	position: absolute;
-	overflow: auto;
+	overflow: hidden;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -234,7 +234,7 @@ article img {
 }
 
 footer .max-width {
-	padding: 1em 5em 1em 5em!important;
+	padding: 1em 5em 0.5em 5em!important;
 	transition: padding 0.5s;
 }
 
@@ -261,6 +261,10 @@ footer .max-width {
 }
 
 @media only screen and (max-width: 695px) {
+.header {
+	overflow: auto;
+}
+
 .header ul {
 	visibility: collapse;
 	width: 0;
@@ -329,7 +333,7 @@ footer .max-width {
 	transition: padding 0.5s;
 }
 footer .max-width {
-	padding: 1em 1.1em 1em 1.1em!important;
+	padding: 1em 1.1em 0.5em 1.1em!important;
 	transition: padding 0.5s;
 }
 .legalp {
@@ -562,6 +566,11 @@ footer .seperator {
 	background-color: var(--blu);
 }
 
+footer .overlay {
+	background-color: var(--gry);
+	height: 1.5em;
+}
+
 .wave {
 	width: 100%;
 	user-select: none;
@@ -597,7 +606,7 @@ footer .seperator {
 }
 
 footer .max-width {
-	padding: 1em 9em 1em 9em;
+	padding: 1em 9em 0.5em 9em;
 	transition: padding 0.5s;
 	justify-content: left;
 	text-align: left;
@@ -801,4 +810,23 @@ footer p {
 /*Global*/
 a {
 	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 1em;
+	height: 1em;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--blu);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #cccccc;
+	border-radius: 1em;
+	border: solid 0.25em var(--blu);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: whitesmoke;
 }
