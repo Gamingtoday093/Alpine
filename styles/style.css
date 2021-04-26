@@ -5,8 +5,8 @@
 
 /*Animations*/
 @keyframes intro {
-	60% {opacity: 100%;}
-	100% {opacity: 0%; transform: scale(12); visibility: collapse;}
+	60% {opacity: 1;}
+	100% {opacity: 0; transform: scale(12); visibility: collapse;}
 }
 
 @keyframes hovheader {
@@ -14,10 +14,20 @@
     100% {background-size: 150000%; color: #cccccc;}
 }
 
+@keyframes hidevideo {
+	0% {opacity: 1;}
+	100% {opacity: 0; visibility: collapse;}
+}
+
 /*Variables*/
 :root {
 	--transform1: 0deg;
 	--transform2: 180deg;
+	--height1: 0;
+	--padding1: 0 1em;
+	--padding2: 10em;
+	--padding3: 5em;
+	--padding4: 0 0.5em;
 	--blu: #27283a;
 	--dkblu: #252537;
 	--gry: #36393f;
@@ -27,6 +37,7 @@ body {
 margin: 0;
 padding-top: 100px;
 transition: padding 0.5s;
+background-color: #36393f;
 background-color: var(--gry);
 }
 
@@ -238,6 +249,11 @@ footer .max-width {
 	transition: padding 0.5s;
 }
 
+#store {
+	padding: 1em 2em 0.5em 2em!important;
+	transition: padding 0.5s;
+}
+
 .legalp {
 	padding: 1em 5em 1em 5em!important;
 	transition: padding 0.5s;
@@ -246,6 +262,55 @@ footer .max-width {
 .divisions {
 	padding: 1em 3em 1em 3em!important;
 	transition: padding 0.5s;
+}
+
+.user {
+	width: 40px!important;
+	height: 40px!important;
+	transition: width 0.5s, height 0.5s;
+}
+
+#userR {
+	width: 4.5em!important;
+	height: inherit!important;
+	transition: width 0.5s, height 0.5s;
+}
+
+.user i {
+	margin-left: -0.075em!important;
+	transition: margin 0.5s;
+}
+
+.user p {
+	visibility: collapse;
+	width: 0;
+	margin: 0;
+}
+
+.storeinfo h1 {
+	padding: 0!important;
+	transition: padding 0.5s;
+}
+
+.featured ul {
+	grid-template-columns: initial!important;
+	grid-template-rows: auto auto auto;
+	grid-row-gap: 1em;
+	grid-column-gap: 0!important;
+}
+
+.ingamestats button {
+	height: 2.5em!important;
+	border-radius: 2.5em!important;
+	font-size: 1.25em!important;
+	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
+}
+
+.storeitemlist button {
+	height: 2em!important;
+	border-radius: 2em!important;
+	font-size: 1em!important;
+	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
 }
 
 }
@@ -287,6 +352,10 @@ footer .max-width {
 	height: 125px!important;
 }
 
+.container ul {
+	overflow: hidden;
+}
+
 .mobilemenu ul {
 	visibility: inherit;
 	height: inherit;
@@ -324,6 +393,9 @@ footer .max-width {
 	font-size: 125%!important;
 	transition: font-size 0.5s;
 }
+.upper .max-width {
+	justify-content: space-around!important;
+}
 #Article1 {
 	padding: 4em 0.1em 2em 0.1em!important;
 	transition: padding 0.5s;
@@ -336,6 +408,10 @@ footer .max-width {
 	padding: 1em 1.1em 0.5em 1.1em!important;
 	transition: padding 0.5s;
 }
+#store {
+	padding: 1em 1.1em 0.5em 1.1em!important;
+	transition: padding 0.5s;
+}
 .legalp {
 	padding: 1em 1.1em 1em 1.1em!important;
 	transition: padding 0.5s;
@@ -343,6 +419,42 @@ footer .max-width {
 .divisions {
 	padding: 1em 1em 1em 1em!important;
 	transition: padding 0.5s;
+}
+.storeinfo {
+	flex-wrap: wrap;
+}
+.storeinfo h1 {
+	position: relative!important;
+	width: 75%;
+	min-width: 280px;
+	min-width: max-content;
+	max-width: 100%;
+	margin: 0 calc(100% - 75%)!important;
+}
+.user {
+	margin-top: 1.75em;
+	transition: margin 0.5s;
+}
+.featured {
+	padding: 0em 0.5em 2em 0.5em!important;
+	transition: padding 0.5s;
+}
+.featured h1 {
+	margin-top: 0.5em!important;
+	transition: margin 0.5s;
+}
+.featured h2 {
+	--padding2: 4em;
+}
+.featured li {
+	height: 20em!important;
+}
+.allstoreitems {
+	padding: 0em 0.5em 0em 0.5em!important;
+    transition: padding 0.5s;
+}
+.fade {
+	visibility: collapse;
 }
 }
 
@@ -361,6 +473,7 @@ footer .max-width {
 	outline: none;
 	margin: auto 0 auto auto;
 	padding: 2px;
+	height: 66px;
 	height: fit-content;
 	transition: transform 0.25s!important;
 }
@@ -437,6 +550,7 @@ footer .max-width {
 
 /*upper*/
 .upper {
+	position: relative;
 	padding: 2em 0.5em;
 	background-image: url('images/background.jpg');
 	background-position: center;
@@ -464,12 +578,77 @@ footer .max-width {
 	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
 }
 
+.upper p {
+	white-space: nowrap;
+	text-shadow: 10px 12px 6px rgba(0,0,0,0.5);
+	padding-top: 0.5em; 
+}
+
+.upper i {
+	font-style: normal;
+	color: white;
+	color: inherit;
+}
+
+.upper b {
+	color: white!important;
+}
+
+#players {
+	cursor: pointer;
+}
+
 .upper img {
 	width: 500px;
 	height: auto;
 	transition: width 0.5s!important;
 	display: block;
 	margin: 0 auto;
+}
+
+.upper video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.upper button {
+	border: none;
+	border-radius: 3em;
+	font-size: 1.25em;
+	padding: 0.5em 2em;
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--blu);
+	opacity: 0.6;
+	color: white;
+	transition: color 0.25s, opacity 0.25s;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 3em;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.upper button:hover {
+	cursor: pointer;
+	color: #cccccc;
+	opacity: 1;
+	background-color: var(--dkblu);
+	transition: color 0.25s, opacity 0.25s, background-color 0.25s;
+}
+
+.upper button:active {
+	color: black;
+	background-color: #cccccc;
+	transition: color 0.25s, background-color 0.25s;
 }
 
 /*articles*/
@@ -567,6 +746,7 @@ footer .seperator {
 }
 
 footer .overlay {
+	background-color: #36393f;
 	background-color: var(--gry);
 	height: 1.5em;
 }
@@ -582,6 +762,8 @@ footer .overlay {
 	background-position: center;
 	background-attachment: fixed;
     background-size: cover;
+    height: 100%;
+    width: 100%;
     max-height: 6em;
 }
 
@@ -600,9 +782,22 @@ footer .overlay {
 	display: inherit;
 }
 
+.upper .max-width {
+	margin: auto;
+	padding: 0 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .divisions .max-width {
 	margin: auto;
 	transition: max-width 0.5s;
+}
+
+.allstoreitems .max-width {
+	display: inherit!important;
+	margin: 0 auto;
 }
 
 footer .max-width {
@@ -611,6 +806,10 @@ footer .max-width {
 	justify-content: left;
 	text-align: left;
 	margin: 0 auto;
+}
+
+#store {
+	padding: 1em 2em 0.5em 2em;
 }
 
 /*divisions*/
@@ -734,6 +933,7 @@ footer .max-width {
 }
 
 footer {
+	background-color: #36393f;
 	background-color: var(--gry);
 	display: block;
 	margin: 0;
@@ -752,11 +952,13 @@ footer p {
 }
 
 #footer {
+	background-color: #36393f;
 	background-color: var(--gry)!important;
 	background-image: none!important;
 }
 
 #footer img {
+	background-color: #36393f;
 	background-color: var(--gry)!important;
 	background-image: none!important;
 	max-height: 3em!important;
@@ -812,9 +1014,22 @@ a {
 	cursor: pointer;
 }
 
+button:focus-visible {
+	outline: auto;
+}
+
+/*Scrollbar*/
 ::-webkit-scrollbar {
 	width: 1em;
 	height: 1em;
+}
+
+.storeitemlist {
+	scrollbar-width: none;
+}
+
+.storeitemlist::-webkit-scrollbar {
+	display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -824,6 +1039,8 @@ a {
 ::-webkit-scrollbar-thumb {
 	background-color: #cccccc;
 	border-radius: 1em;
+	min-height: 1em;
+	min-width: 1em;
 	border: solid 0.25em var(--blu);
 }
 

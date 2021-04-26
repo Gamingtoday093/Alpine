@@ -1,27 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Alpine</title>
+	<title>Alpine Store</title>
 	<link rel="icon" href="styles/images/icon.png">
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/store.css">
 	<script src="https://kit.fontawesome.com/49146c74ae.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<meta name="description" content="Official Alpine Store! Purchase awesome items and play with even more authentic WW1 content!">
 	<meta name="keywords" content="Alpine, Unturned, Server, WW1 Complete, WW1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<!--Background-->
+	<div class="background">
+	</div>
 	<!--Main Content-->
 	<div class="content">
-		
+		<section class="storeinfo">
+			<h1><i class="fas fa-store"></i> STORE</h1>
+			<div class="user" title="Store Manager">
+				<img src="styles\images\pfp2.png" alt="user" width="40" height="40">
+				<p><b>Store Manager:</b><br>Friedhelm (Kip meneer)</p>
+			</div>
+			<div class="user" title="Checkout" id="userR">
+				<a href="https://gamingtoday093.github.io/Alpine/">
+					<i class="fas fa-shopping-cart"><p id="items">0</p></i>
+					<p>Checkout</p>
+				</a>
+			</div>
+		</section>
+		<!--Featured-->
+		<section class="featured">
+			<h1>Featured</h1>
+			<ul>
+				<li id="kit" class="bakStorm">
+					<div class="iteminfogrid">
+						<h3>Kit skins</h3>
+					<div class="price">
+						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+						<p>  Price: 4$ / 3.20€ / 2.60£</p>
+					</div>
+					<div class="ingamestats">
+						<p>Kit: <code>/kit STuniform</code></p>
+						<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+						<p>Cooldown: <code>1 year</code></p>
+						<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+					</div>
+					<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+					<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+					</div>
+					<h2>Stormtruppen Uniform Kit
+						<div class="price">
+							<p>4$ / 3.20€ / 2.60£</p>
+						</div>
+					</h2>
+				</li>
+				<li id="bundle" class="bakBE">
+					<div class="iteminfogrid">
+						<h3>Kit bundle</h3>
+					<div class="price">
+						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+						<p>  Price: 5$ / 4.20€ / 3.60£</p>
+					</div>
+					<div class="ingamestats">
+						<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
+						<p>Contents: <code>Belgium Soldier Uniform + Mauser M1889 and FN Model 1910</code></p>
+						<p>Cooldown: <code>1 year + Every life</code></p>
+						<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+					</div>
+					<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER - SAVE 37.5%</u></b></p>
+					<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+				</div>
+					<h2>Belgian Soldier Kit
+						<div class="price">
+							<p>5$ / 4.20€ / 3.60£</p>
+						</div>
+					</h2>
+				</li>
+				<li id="item" class="bakpaint">
+					<div class="iteminfogrid">
+						<h3>Item skins</h3>
+					<div class="price">
+						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+						<p>  Price: 1$ / 0.85€ / 0.72£</p>
+					</div>
+					<div class="ingamestats">
+						<p>Contents: <code>4x Paint items</code></p>
+						<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+					</div>
+					<p>Not willing to shell out 5$ for the Paint bucket kit? Then this is the item kit for you! Get <b>4x Paint items</b> for a really <b>cheap price</b> and <b>save money</b> on a one time purchase!</p>
+				</div>
+					<h2>Paint bucket
+						<div class="price">
+							<p>1$ / 0.85€ / 0.72£</p>
+						</div>
+					</h2>
+				</li>
+			</ul>
+		</section>
+		<!--All Store Items-->
+		<section class="allstoreitems">
+			<div class="max-width">
+				<h1>Kit bundles</h1>
+			<div class="storeitemlistarea">
+				<div class="fade" id="bundlebuttonR">
+					<button class="moreitems" onclick="ScrollitemsR('bundlelist', 'bundlebuttonL', 'bundlebuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<div class="fade" id="bundlebuttonL">
+					<button class="moreitems" onclick="ScrollitemsL('bundlelist', 'bundlebuttonL', 'bundlebuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<ul class="storeitemlist" id="bundlelist">
+					<li id="bundle" class="bakBE">
+						<div class="iteminfogrid">
+							<h3>Kit bundle</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 5$ / 4.20€ / 3.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
+							<p>Contents: <code>Belgium Soldier Uniform + Mauser M1889 and FN Model 1910</code></p>
+							<p>Cooldown: <code>1 year + Every life</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER - SAVE 37.5%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Belgian Soldier Kit
+							<div class="price">
+								<p>5$ / 4.20€ / 3.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="bundle" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="bundle" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="bundle" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="bundle" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="bundle" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+				</ul>
+			</div>
+				<h1>Item skins</h1>
+			<div class="storeitemlistarea">
+				<div class="fade" id="itembuttonR">
+					<button class="moreitems" onclick="ScrollitemsR('itemlist', 'itembuttonL', 'itembuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<div class="fade" id="itembuttonL">
+					<button class="moreitems" onclick="ScrollitemsL('itemlist', 'itembuttonL', 'itembuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<ul class="storeitemlist" id="itemlist">
+					<li id="item" class="bakBE">
+						<div class="iteminfogrid">
+							<h3>Kit bundle</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 5$ / 4.20€ / 3.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
+							<p>Contents: <code>Belgium Soldier Uniform + Mauser M1889 and FN Model 1910</code></p>
+							<p>Cooldown: <code>1 year + Every life</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER - SAVE 37.5%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Belgian Soldier Kit
+							<div class="price">
+								<p>5$ / 4.20€ / 3.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="item" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="item" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="item" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="item" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="item" class="bakBE">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+				</ul>
+			</div>
+				<h1>Kit skins</h1>
+			<div class="storeitemlistarea">
+				<div class="fade" id="kitbuttonR">
+					<button class="moreitems" onclick="ScrollitemsR('kitlist', 'kitbuttonL', 'kitbuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<div class="fade" id="kitbuttonL">
+					<button class="moreitems" onclick="ScrollitemsL('kitlist', 'kitbuttonL', 'kitbuttonR')"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<ul class="storeitemlist" id="kitlist">
+					<li id="kit" class="bakBE">
+						<div class="iteminfogrid">
+							<h3>Kit bundle</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 5$ / 4.20€ / 3.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
+							<p>Contents: <code>Belgium Soldier Uniform + Mauser M1889 and FN Model 1910</code></p>
+							<p>Cooldown: <code>1 year + Every life</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER - SAVE 37.5%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Belgian Soldier Kit
+							<div class="price">
+								<p>5$ / 4.20€ / 3.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="kit" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="kit" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="kit" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="kit" class="bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+					<li id="kit" class="bakBE">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p>4$ / 3.20€ / 2.60£</p>
+							</div>
+						</h2>
+					</li>
+				</ul>
+			</div>
+
+			</div>
+		</section>
 	</div>
 	<!--footer-->
 	<footer>
 		<div class="wave" id="footer" width="100%" height="auto">
 			<img src="styles\images\wave3.svg" alt="wave3">
 		</div>
-		<div class="max-width"> <!--max-width to make everything not go out too far on larger screens-->
-			<p>Alpine | WW1 | War RP | Kits</p>
+		<div class="max-width" id="store"> <!--max-width to make everything not go out too far on larger screens-->
+			<p translate="no">Alpine | WW1 | War RP | Kits</p>
 			<div class="seperator"><br></div>
 			<div class="legal">
 				<a href="https://gamingtoday093.github.io/Alpine/Legal/terms.html">Terms</a>
@@ -74,5 +593,6 @@
 	</div>
 </body>
 	<!--Website scripts are loaded after all the elements are loaded-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="scripts.js"></script>
 </html>

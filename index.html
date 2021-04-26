@@ -15,11 +15,19 @@
 	<div class="content">
 		<!--Upper section-->
 		<section class="upper">
+			<!--Trailer-->
+			<video width="1920" height="1080" autoplay muted id="videohide">
+  				<source src="https://cdn.discordapp.com/attachments/472407264700006420/835611353657901086/Half-Life_meme.mp4" type="video/mp4">
+  			</video>
+  			<button class="skip" id="videohide2" onclick="hidevideo()">Skip Trailer <i class="fas fa-angle-right"></i></button>
 			<!--Logo-->
 			<img src="styles\images\LogoH.png" alt="LogoH" width="640" height="380">
 			<h1 translate="no">ALPINE</h1>
 			<h2>Unturned's Biggest WW1 Server</h2>
-			<!--TRAILER WILL GO HERE TOO-->
+			<div class="max-width">
+				<p id="players" title="Refresh" onclick="getplayercount()"><i>??<b>/</b>28</i> Players Online</p>
+				<p>123.23.123.123 | 27001</p>
+			</div>
 		</section>
 		<!--Lower section-->
 		<section class="lower">
@@ -49,7 +57,7 @@
 								<h2>Army</h2>
 							</div>
 							<div class="back">
-								<p><b>Get close and personal with the enemy either as a Solider or Medic!</b><br>Get access to deadly firearms and lead the other divisions to victory!</p>
+								<p><b>Get close and personal with the enemy either as a Soldier or Medic!</b><br>Get access to deadly firearms and lead the other divisions to victory!</p>
 							</div>
 						</li>
 						<li>
@@ -96,7 +104,7 @@
 						<br>
 						<br>
 						Not to overshadow the hard work done by other members of the Unturned community such as talented modmakers and mappers, bringing this project to reality. The entire Alpine community is extremly thankful for all your effort. Please show some admiration by checking out the link below!</p>
-						<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1778848718"><i class="fab fa-steam"></i> Workshop page</a>
+						<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1778848718" target="_blank"><i class="fab fa-steam"></i> Workshop page</a>
 					</div>
 					<img src="https://media.discordapp.net/attachments/545016765885972494/823631786989977620/mark2.png?width=759&height=427" alt="Tank" width="640" height="360">
 				</div>
@@ -109,7 +117,7 @@
 			<img src="styles\images\wave3.svg" alt="wave3">
 		</div>		
 		<div class="max-width"> <!--max-width to make everything not go out too far on larger screens-->
-			<p>Alpine | WW1 | War RP | Kits</p>
+			<p translate="no">Alpine | WW1 | War RP | Kits</p>
 			<div class="seperator"><br></div>
 			<div class="legal">
 				<a href="https://gamingtoday093.github.io/Alpine/Legal/terms.html">Terms</a>
@@ -170,6 +178,8 @@
 	<script src="scripts.js"></script>
 	<script>
 		window.addEventListener("resize", resizewin);
+		document.getElementById('videohide').addEventListener('ended', hidevideo);
 		window.onresize = resizewin();
+		getplayercount();
 	</script>
 </html>
