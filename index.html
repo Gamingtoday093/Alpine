@@ -16,10 +16,13 @@
 		<!--Upper section-->
 		<section class="upper">
 			<!--Trailer-->
-			<video width="1920" height="1080" autoplay muted id="videohide">
-  				<source src="https://cdn.discordapp.com/attachments/472407264700006420/835611353657901086/Half-Life_meme.mp4" type="video/mp4">
-  			</video>
-  			<button class="skip" id="videohide2" onclick="hidevideo()">Skip Trailer <i class="fas fa-angle-right"></i></button>
+			<div class="videoblock" id="videohide">
+				<div id="loading" class="loading"></div>
+				<video width="1920" height="1080" autoplay muted id="video">
+  					<source src="https://cdn.discordapp.com/attachments/472407264700006420/835611353657901086/Half-Life_meme.mp4" type="video/mp4">
+  				</video>
+  				<button class="skip" onclick="hidevideo()">Skip Trailer <i class="fas fa-angle-right"></i></button>
+  			</div>
 			<!--Logo-->
 			<img src="styles\images\LogoH.png" alt="LogoH" width="640" height="380">
 			<h1 translate="no">ALPINE</h1>
@@ -178,7 +181,7 @@
 	<script src="scripts.js"></script>
 	<script>
 		window.addEventListener("resize", resizewin);
-		document.getElementById('videohide').addEventListener('ended', hidevideo);
+		document.getElementById('video').addEventListener('ended', hidevideo);
 		window.onresize = resizewin();
 		getplayercount();
 	</script>

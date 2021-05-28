@@ -5,7 +5,7 @@
 
 /*Animations*/
 @keyframes intro {
-	60% {opacity: 1;}
+	60% {opacity: 0;}
 	100% {opacity: 0; transform: scale(12); visibility: collapse;}
 }
 
@@ -15,8 +15,24 @@
 }
 
 @keyframes hidevideo {
-	0% {opacity: 1;}
+	0% {opacity: 1; visibility: visible;}
 	100% {opacity: 0; visibility: collapse;}
+}
+
+@keyframes showcheckoutbak {
+	0% {opacity: 0.7; visibility: visible;}
+	100% {opacity: 0; visibility: collapse;}
+}
+
+@keyframes shownotif {
+	0% {opacity: 0; visibility: collapse; transform: scale(1);}
+	25% {opacity: 1; transform: scale(1.1);}
+	100% {opacity: 1; visibility: visible;}
+}
+
+@keyframes spin {
+	0% {transform: translate(-50%, -50%) rotateY(0deg);}
+	100% {transform: translate(-50%, -50%) rotateY(360deg);}
 }
 
 /*Variables*/
@@ -30,6 +46,7 @@
 	--padding4: 0 0.5em;
 	--blu: #27283a;
 	--dkblu: #252537;
+	--dkblutransparent: rgba(37, 37, 55, 0.5);
 	--gry: #36393f;
 }
 
@@ -58,6 +75,7 @@ background-color: var(--gry);
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 .intro img {
@@ -287,6 +305,10 @@ footer .max-width {
 	margin: 0;
 }
 
+#items {
+	width: auto!important;
+}
+
 .storeinfo h1 {
 	padding: 0!important;
 	transition: padding 0.5s;
@@ -301,16 +323,25 @@ footer .max-width {
 
 .ingamestats button {
 	height: 2.5em!important;
-	border-radius: 2.5em!important;
+	border-radius: 0.5em!important;
 	font-size: 1.25em!important;
 	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
 }
 
 .storeitemlist button {
 	height: 2em!important;
-	border-radius: 2em!important;
+	border-radius: 0.25em!important;
 	font-size: 1em!important;
 	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
+}
+
+.lower {
+	flex-direction: column!important;
+}
+
+.info {
+	margin-right: 0px!important;
+	transition: margin 0.5s!important;
 }
 
 }
@@ -382,47 +413,59 @@ footer .max-width {
 	width: 70px;
 	transition: width 0.5s, transform 0.025s;
 }
+
 .MenuButton {
 	visibility: visible!important;
 }
+
 .upper h1 {
 	font-size: 400%!important;
 	transition: font-size 0.5s;
 }
+
 .upper h2 {
 	font-size: 125%!important;
 	transition: font-size 0.5s;
 }
+
 .upper .max-width {
 	justify-content: space-around!important;
 }
+
 #Article1 {
 	padding: 4em 0.1em 2em 0.1em!important;
 	transition: padding 0.5s;
 }
+
 #Article2 {
 	padding: 2em 0.1em 4em 0.1em!important;
 	transition: padding 0.5s;
 }
+
 footer .max-width {
 	padding: 1em 1.1em 0.5em 1.1em!important;
 	transition: padding 0.5s;
 }
+
 #store {
 	padding: 1em 1.1em 0.5em 1.1em!important;
 	transition: padding 0.5s;
 }
+
 .legalp {
 	padding: 1em 1.1em 1em 1.1em!important;
 	transition: padding 0.5s;
 }
+
 .divisions {
 	padding: 1em 1em 1em 1em!important;
 	transition: padding 0.5s;
 }
+
 .storeinfo {
 	flex-wrap: wrap;
 }
+
 .storeinfo h1 {
 	position: relative!important;
 	width: 75%;
@@ -431,31 +474,68 @@ footer .max-width {
 	max-width: 100%;
 	margin: 0 calc(100% - 75%)!important;
 }
+
 .user {
 	margin-top: 1.75em;
 	transition: margin 0.5s;
 }
+
+.checkout {
+	padding: 1em!important;
+	transition: padding 0.5s;
+}
+
+.checkout table {
+	padding: 1em 1em 2em 1em!important;
+	transition: padding 0.5s;
+}
+
+.cartnotification {
+	font-size: 0.75em;
+	transition: font-size 0.5s!important;
+}
+
 .featured {
 	padding: 0em 0.5em 2em 0.5em!important;
 	transition: padding 0.5s;
 }
+
 .featured h1 {
 	margin-top: 0.5em!important;
 	transition: margin 0.5s;
 }
+
 .featured h2 {
 	--padding2: 4em;
 }
+
 .featured li {
 	height: 20em!important;
 }
+
 .allstoreitems {
 	padding: 0em 0.5em 0em 0.5em!important;
     transition: padding 0.5s;
 }
+
 .fade {
 	visibility: collapse;
 }
+
+.lower {
+	padding: 2em 0.5em 1em 0.5em!important;
+	transition: padding 0.5s!important;
+}
+
+.info {
+	font-size: 0.75em;
+	transition: font-size 0.5s!important;
+}
+
+.goal {
+	white-space: normal!important;
+}
+
 }
 
 /*Mobilemenu*/
@@ -606,16 +686,37 @@ footer .max-width {
 	margin: 0 auto;
 }
 
-.upper video {
+.upper .videoblock {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	object-fit: cover;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+	background-color: black;
+}
+
+.upper video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.upper .loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	opacity: 0.5;
+	height: 5em;
+	width: 5em;
+	border-radius: 1em;
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
 }
 
 .upper button {
@@ -632,9 +733,6 @@ footer .max-width {
 	left: 50%;
 	transform: translate(-50%);
 	bottom: 3em;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
 }
 
 .upper button:hover {
