@@ -58,6 +58,7 @@
 	border-bottom: solid 6px white;
 	background-color: rgba(0,0,0,0.3);
 	outline: solid 12px rgba(0,0,0,0.3);
+	overflow: hidden;
 }
 
 .user {
@@ -95,6 +96,7 @@
 	display: inherit;
 	align-items: inherit;
 	padding: 1em;
+	width: 100%;
 	border-radius: 100em;
 	color: white;
 	transition: color 0.25s;
@@ -105,6 +107,12 @@
 	color: #cccccc;
 	transition: color 0.25s;
 	cursor: pointer;
+}
+
+#userR:hover {
+	transform: translateY(-0.25rem);
+	filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.7));
+	transition: transform 0.25s, filter 0.25s;
 }
 
 .user button:active {
@@ -131,7 +139,7 @@
 	padding: 0;
 	width: 179.2px;
 	max-height: 72px;
-	transition: width 0.5s, height 0.5s;
+	transition: width 0.5s, height 0.5s, transform 0.25s, filter 0.25s;;
 }
 
 #userR p {
@@ -250,6 +258,11 @@
 	text-align: right;
 }
 
+.checkout tbody:hover {
+	background-color: var(--dkblu);
+	--removeitembool: visible;
+}
+
 .checkout tfoot {
 	font-size: 1.25em;
 }
@@ -264,10 +277,46 @@
 
 }
 
+.removeitem {
+	visibility: var(--removeitembool);
+	border-radius: 50%;
+	border: none;
+	background-color: #cccccc;
+	height: 24px;
+	width: 24px;
+	padding: 0;
+	margin-left: 0.25em;
+	transform: translateY(-2.5px);
+	transition: background-color 0.25s;
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 18px;
+	padding: 3px;
+}
+
+.removeitem i {
+	transform: none!important;
+	color: var(--blu);
+}
+
+.removeitem:hover {
+	background-color: #eeeeee;
+	transition: background-color 0.25s;
+	cursor: pointer;
+}
+
+.removeitem:active {
+	background-color: white;
+	transition: background-color 0.25s;
+}
+
 .checkout .exit {
-	position: absolute;
-	right: 0.4em;
-	top: 0.4em;
+	position: sticky;
+	float: right;
+	top: 0em;
 	border-radius: 50%;
 	color: #cccccc;
 	font-size: 2em;

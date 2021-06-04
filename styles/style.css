@@ -48,6 +48,7 @@
 	--dkblu: #252537;
 	--dkblutransparent: rgba(37, 37, 55, 0.5);
 	--gry: #36393f;
+	--removeitembool: collapse;
 }
 
 body {

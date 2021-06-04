@@ -30,6 +30,7 @@ function ScrollitemsL(list, bL, bR) {
 // Add to Cart
 var notif = document.getElementById("cartnotification");
 var carticon = document.getElementById("items");
+var removebuttontext = "<button class='removeitem'><i class='fas fa-times' onclick='removefromcart(";
 var item = "(Cartitem)";
 let cart = [];
 var totalprice = 0;
@@ -48,11 +49,11 @@ function addtocart(item, price) {
 		totalprice = 0;
 		cartlist.innerHTML = "<thead><tr><th>Items (" + cart.length + ")</th><th class='pricetd'>Price $</th></tr></thead>";
 		for (i = 0, size = cart.length; i < size; i++) {
-			cartlist.innerHTML += "<tr><td>" + cart[i][0] + "</td><td class='pricetd'>" + cart[i][1] + "$</td></tr>";
+			cartlist.innerHTML += "<tr><td>" + cart[i][0] + removebuttontext + [i] + ")'></i></button></td><td class='pricetd'>" + cart[i][1] + "$</td></tr>";
 			totalprice = totalprice + parseInt(cart[i][1]);
 		}
 		cartlist.innerHTML += "<tfoot><tr><td>Total Price</td><td class='pricetd'>" + totalprice + "$</td></tr></tfoot>";
-		console.table(cart);
+		//console.table(cart);
 	}
 
 	// Animations
@@ -85,6 +86,19 @@ function addtocart(item, price) {
     }
   }).render('#paypalbuttons');
   //This function displays Smart Payment Buttons on your web page.
+
+// Remove from cart
+function removefromcart(itemindex) {
+	cart.splice(itemindex, 1);
+	carticon.innerHTML = cart.length;
+	totalprice = 0;
+	cartlist.innerHTML = "<thead><tr><th>Items (" + cart.length + ")</th><th class='pricetd'>Price $</th></tr></thead>";
+	for (i = 0, size = cart.length; i < size; i++) {
+		cartlist.innerHTML += "<tr><td>" + cart[i][0] + removebuttontext + [i] + ")'></i></button></td><td class='pricetd'>" + cart[i][1] + "$</td></tr>";
+		totalprice = totalprice + parseInt(cart[i][1]);
+	}
+	cartlist.innerHTML += "<tfoot><tr><td>Total Price</td><td class='pricetd'>" + totalprice + "$</td></tr></tfoot>";
+}
 
 // Go to Checkout
 var checkoutblock = document.getElementById("checkout");
