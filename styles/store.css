@@ -15,6 +15,8 @@
 .background video {
 	object-fit: cover;
 	position: absolute;
+	width: 100%;
+	height: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -68,6 +70,7 @@
 	border-radius: 100em;
 	max-height: calc(72px - 2em);
 	height: fit-content;
+	overflow: hidden;
 	background-color: #27283a;
 	background-color: var(--blu);
 	filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
@@ -189,10 +192,10 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 80%;
 	width: 80%;
-	min-width: 295px;
+	min-width: 650px;
 	max-width: 1600px;
+	max-height: 80%;
 	padding: 2em;
 	border-radius: 0.5em;
 	color: white;
@@ -204,7 +207,7 @@
 	animation-fill-mode: forwards;
 	overflow: auto;
 	font-family: 'Roboto', sans-serif;
-	transition: padding 0.5s;
+	transition: padding 0.5s, max-width 0.5s, height 0.5s;
 }
 
 .checkout h1 {
@@ -214,7 +217,11 @@
 }
 
 .checkout p {
-	font-size: 0.75em;
+	font-size: 1em;
+}
+
+.checkoutcontent {
+	display: flex;
 }
 
 .checkout #checkoutinfo {
@@ -226,6 +233,7 @@
 #checkoutinfo a {
 	visibility: visible;
 	margin-left: 0.25em;
+	font-size: 24px;
 	color: #cccccc;
 	transition: color 0.25s;
 }
@@ -244,10 +252,23 @@
 	transform: translateY(2.5px);
 }
 
+.checkoutcart {
+	background-color: #607d8b;
+	border-radius: 0.5em;
+	height: min-content;
+	position: sticky;
+	top: 68px;
+	margin-left: 2em;
+	padding: 1em;
+}
+
+.checkoutcart h2 {
+	margin-bottom: 0.5em;
+}
+
 .checkout table {
-	width: 100%;
-	padding: 1em 3em 2em 3em;
-	transition: padding 0.5s;
+	width: 300px;
+	white-space: nowrap;
 }
 
 .checkout th {
@@ -259,12 +280,57 @@
 }
 
 .checkout tbody:hover {
-	background-color: var(--dkblu);
+	background-color: #546e7a;
 	--removeitembool: visible;
 }
 
 .checkout tfoot {
 	font-size: 1.25em;
+}
+
+.storeterms {
+	height: 300px;
+	overflow: auto;
+	margin-bottom: 0.5em;
+	transition: font-size 0.5s, width 0.5s, height 0.5s;
+}
+
+.storeterms a {
+	color: #69b9ff!important;
+	font-size: 1em!important;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.storeterms a:hover {
+	color: #2c8add!important;
+	transition: color 0.5s;
+}
+
+.storetermsapprove, #checkoutinfo label {
+	font-size: 1.15em;
+	transition: font-size 0.5s;
+}
+
+.coupon {
+	padding: 1em 0;
+}
+
+#steamid64 {
+	border-radius: 5px;
+	height: 20px;
+	border: none;
+}
+
+.storetermsapprove:hover {
+	cursor: pointer;
+	color: #dddddd;
+}
+
+#storetermscheck {
+	height: 20px;
+	width: 20px;
+	transition: width 0.5s, height 0.5s;
 }
 
 #paypalbuttons {
@@ -273,7 +339,7 @@
 	background-color: white;
 	max-width: 750px;
 	padding: 1em 1em 0 1em;
-	margin: 0 auto;
+	margin: 2em auto 0 auto;
 
 }
 
@@ -299,7 +365,7 @@
 
 .removeitem i {
 	transform: none!important;
-	color: var(--blu);
+	color: #37474f;
 }
 
 .removeitem:hover {
@@ -343,7 +409,7 @@
 
 /*Lower*/
 
-.lower {
+.lowerstore {
 	max-width: 1350px;
 	margin: 0 auto;
 	padding: 0 2em 3em 2em;
@@ -520,6 +586,10 @@ h2 > .price p {
 	text-align: right;
 }
 
+.pricespace {
+	margin-right: 0.3em!important;
+}
+
 .limited {
 	color: rgb(255, 0, 76)!important;
 	font-size: 1.5em!important;
@@ -555,10 +625,6 @@ h2 > .price p {
 	transition: max-height 0.5s, padding 0.5s;
 }
 
-.storeitemlist .iteminfogrid {
-	padding: var(--padding4);
-}
-
 .iteminfogrid h3 {
 	color: white;
 	white-space: nowrap;
@@ -576,7 +642,8 @@ h2 > .price p {
 }
 
 .storeitemlist .iteminfogrid {
-	font-size: 0.8em!important;
+	font-size: 0.9em!important;
+	padding: var(--padding4);
 }
 
 .iteminfogrid code {
@@ -656,8 +723,8 @@ h2 > .price p {
 }
 
 .allstoreitems li {
-	height: 15em;
-	min-width: 320px;
+	height: 17.5em;
+	min-width: 380px;
 	text-align: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -683,7 +750,7 @@ h2 > .price p {
 .allstoreitems h2 {
 	padding: 0.5em 0.25em 0.5em 0.25em;
 	padding-top: var(--padding3);
-	font-size: 1.4em;
+	font-size: 1.5em;
 	letter-spacing: 1.35px;
 }
 

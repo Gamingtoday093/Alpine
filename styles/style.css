@@ -76,7 +76,6 @@ background-color: var(--gry);
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-	opacity: 0;
 }
 
 .intro img {
@@ -323,9 +322,9 @@ footer .max-width {
 }
 
 .ingamestats button {
-	height: 2.5em!important;
+	height: 2.25em!important;
 	border-radius: 0.5em!important;
-	font-size: 1.25em!important;
+	font-size: 1.1em!important;
 	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
 }
 
@@ -336,7 +335,7 @@ footer .max-width {
 	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
 }
 
-.lower {
+.lowerstore {
 	flex-direction: column!important;
 }
 
@@ -483,12 +482,36 @@ footer .max-width {
 
 .checkout {
 	padding: 1em!important;
-	transition: padding 0.5s;
+	transition: padding 0.5s, max-width 0.5s, height 0.5s;
+	max-width: 100%!important;
+	min-width: 295px!important;
+	max-height: 100%!important;
+	width: 90%!important;
 }
 
 .checkout table {
-	padding: 1em 1em 2em 1em!important;
+	padding: 1.5em 1em 1.5em 1em!important;
 	transition: padding 0.5s;
+}
+
+.storeterms, .steamparagraph, .storetermsapprove {
+	font-size: 0.75em!important;
+	transition: font-size 0.5s;
+}
+
+.storetermsapprove {
+	font-size: 1em!important;
+	transition: font-size 0.5s;
+}
+
+#storetermscheck {
+	width: 15px!important;
+	height: 15px!important;
+	transition: width 0.5s, height 0.;
+}
+
+.checkoutinfo p {
+	font-size: 0.75em;
 }
 
 .cartnotification {
@@ -523,7 +546,7 @@ footer .max-width {
 	visibility: collapse;
 }
 
-.lower {
+.lowerstore {
 	padding: 2em 0.5em 1em 0.5em!important;
 	transition: padding 0.5s!important;
 }

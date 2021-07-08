@@ -14,9 +14,9 @@
 <body>
 	<!--Background-->
 	<div class="background">
-		<!--<video width="1920" height="1080" autoplay muted>
-  			<source src="https://cdn.discordapp.com/attachments/472407264700006420/835611353657901086/Half-Life_meme.mp4" type="video/mp4">
-  		</video>-->
+		<video width="1920" height="1080" autoplay muted loop>
+  			<source src="https://cdn.discordapp.com/attachments/545016765885972494/857303290286309436/2018.11.25-21.10_Trim.mp4" type="video/mp4">
+  		</video>
 	</div>
 	<!--Main Content-->
 	<div class="content">
@@ -42,7 +42,7 @@
 						<h3>Kit skins</h3>
 					<div class="price">
 						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p>  Price: 4$ / 3.20€ / 2.60£</p>
+						<p class="pricespace">Price:<p class="getprice">4</p></p>
 					</div>
 					<div class="ingamestats">
 						<p>Kit: <code>/kit STuniform</code></p>
@@ -56,7 +56,7 @@
 					<h2>
 						Stormtruppen Uniform Kit
 						<div class="price">
-							<p>4$ / 3.20€ / 2.60£</p>
+							<p class="getprice">4</p>
 						</div>
 					</h2>
 				</li>
@@ -65,7 +65,7 @@
 						<h3>Kit bundle</h3>
 					<div class="price">
 						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p>  Price: 5$ / 4.20€ / 3.60£</p>
+						<p class="pricespace">Price:<p class="getprice">5</p></p>
 					</div>
 					<div class="ingamestats">
 						<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
@@ -78,7 +78,7 @@
 				</div>
 					<h2>Belgian Soldier Kit
 						<div class="price">
-							<p class="limited">5$ / 4.20€ / 3.60£ <i class="far fa-clock"></i></p>
+							<p class="limited getprice">5<i class="far fa-clock"></i></p>
 						</div>
 					</h2>
 				</li>
@@ -87,7 +87,7 @@
 						<h3>Item skins</h3>
 					<div class="price">
 						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p>  Price: 1$ / 0.85€ / 0.72£</p>
+						<p class="pricespace">Price:<p class="getprice">1</p></p>
 					</div>
 					<div class="ingamestats">
 						<p>Contents: <code>4x Paint items</code></p>
@@ -97,7 +97,7 @@
 				</div>
 					<h2>Paint bucket
 						<div class="price">
-							<p>1$ / 0.85€ / 0.72£</p>
+							<p class="getprice">1</p>
 						</div>
 					</h2>
 				</li>
@@ -120,108 +120,20 @@
 							<h3>Kit bundle</h3>
 						<div class="price">
 							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 5$ / 4.20€ / 3.60£</p>
+							<p class="pricespace">Price:<p class="getprice">5</p></p>
 						</div>
 						<div class="ingamestats">
 							<p>Kit: <code>/kit BEuniform + /kit BEbolt</code></p>
 							<p>Contents: <code>Belgium Soldier Uniform + Mauser M1889 and FN Model 1910</code></p>
 							<p>Cooldown: <code>1 year + Every life</code></p>
-							<button onclick="addtocart()">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+							<button onclick="addtocart('Belgian Soldier Kit', '5')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
 						</div>
 							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER - SAVE 37.5%</u></b></p>
 							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
 						</div>
 						<h2>Belgian Soldier Kit
 							<div class="price">
-								<p>5$ / 4.20€ / 3.60£</p>
-							</div>
-						</h2>
-					</li>
-					<li id="bundle" class="bakStorm">
-						<div class="iteminfogrid">
-							<h3>Kit skins</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 4$ / 3.20€ / 2.60£</p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit STuniform</code></p>
-							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
-							<p>Cooldown: <code>1 year</code></p>
-							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
-							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
-						</div>
-						<h2>Stormtruppen Uniform Kit
-							<div class="price">
-								<p>4$ / 3.20€ / 2.60£</p>
-							</div>
-						</h2>
-					</li>
-					<li id="bundle" class="bakStorm">
-						<div class="iteminfogrid">
-							<h3>Kit skins</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 4$ / 3.20€ / 2.60£</p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit STuniform</code></p>
-							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
-							<p>Cooldown: <code>1 year</code></p>
-							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
-							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
-						</div>
-						<h2>Stormtruppen Uniform Kit
-							<div class="price">
-								<p>4$ / 3.20€ / 2.60£</p>
-							</div>
-						</h2>
-					</li>
-					<li id="bundle" class="bakStorm">
-						<div class="iteminfogrid">
-							<h3>Kit skins</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 4$ / 3.20€ / 2.60£</p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit STuniform</code></p>
-							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
-							<p>Cooldown: <code>1 year</code></p>
-							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
-							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
-						</div>
-						<h2>Stormtruppen Uniform Kit
-							<div class="price">
-								<p>4$ / 3.20€ / 2.60£</p>
-							</div>
-						</h2>
-					</li>
-					<li id="bundle" class="bakStorm">
-						<div class="iteminfogrid">
-							<h3>Kit skins</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 4$ / 3.20€ / 2.60£</p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit STuniform</code></p>
-							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
-							<p>Cooldown: <code>1 year</code></p>
-							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
-							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
-						</div>
-						<h2>Stormtruppen Uniform Kit
-							<div class="price">
-								<p>4$ / 3.20€ / 2.60£</p>
+								<p class="limited getprice">5<i class="far fa-clock"></i></p>
 							</div>
 						</h2>
 					</li>
@@ -230,20 +142,86 @@
 							<h3>Kit skins</h3>
 						<div class="price">
 							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p>  Price: 4$ / 3.20€ / 2.60£</p>
+							<p class="pricespace">Price:<p class="getprice">4</p></p>
 						</div>
 						<div class="ingamestats">
 							<p>Kit: <code>/kit STuniform</code></p>
 							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
 							<p>Cooldown: <code>1 year</code></p>
-							<button>Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+							<button onclick="addtocart('Stormtruppen Uniform Kit', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
 						</div>
 							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
 							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
 						</div>
 						<h2>Stormtruppen Uniform Kit
 							<div class="price">
-								<p>4$ / 3.20€ / 2.60£</p>
+								<p class="getprice">4</p>
+							</div>
+						</h2>
+					</li>
+					<li class="bundle bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p class="pricespace">Price:<p class="getprice">4</p></p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button onclick="addtocart('Stormtruppen Uniform Kit', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p class="getprice">4</p>
+							</div>
+						</h2>
+					</li>
+					<li class="bundle bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p class="pricespace">Price:<p class="getprice">4</p></p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button onclick="addtocart('Stormtruppen Uniform Kit', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p class="getprice">4</p>
+							</div>
+						</h2>
+					</li>
+					<li class="bundle bakStorm">
+						<div class="iteminfogrid">
+							<h3>Kit skins</h3>
+						<div class="price">
+							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
+							<p class="pricespace">Price:<p class="getprice">4</p></p>
+						</div>
+						<div class="ingamestats">
+							<p>Kit: <code>/kit STuniform</code></p>
+							<p>Contents: <code>Sturmtruppen Soldier Uniform</code></p>
+							<p>Cooldown: <code>1 year</code></p>
+							<button onclick="addtocart('Stormtruppen Uniform Kit', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+						</div>
+							<p class="limited"></i> <b><u><s>4$</s> / 2$ - SAVE 50%</u></b></p>
+							<p>Get this awesome uniform and become a <b>Belgian Soldier</b>! This bundle also includes <b>Belgian made weapons</b>! Keep in mind that it's a <b>cheaper price</b> than buying both kits separately.</p>
+						</div>
+						<h2>Stormtruppen Uniform Kit
+							<div class="price">
+								<p class="getprice">4</p>
 							</div>
 						</h2>
 					</li>
@@ -646,30 +624,56 @@
 			<i class="fas fa-times exit" onclick="gotocheckout()"></i>
 			<h1>Checkout</h1>
 			<div class="seperator"><br></div>
-			<div id="checkoutinfo">
-				<h2>Information</h2>
-				<p>Please fill in your SteamID64 so we can identify and give you your purchase ingame. SteamID64 is a public identification number for your steam account.</p>
-				<label for="steamid64">SteamID64:</label>
-				<input type="number" id="steamid64" name="steamid64" min="0" max="99999999999999999"><a href="https://steamid.io/" target="_blank" title="Find your SteamID64"><i class="fas fa-question-circle"></i></a>
-				<table id="cartlist">
-					<thead>
-						<tr>
-							<th>Items (0)</th>
-							<th class="pricetd">Price $</th>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<td>Total Price</td>
-							<td class="pricetd">0$</td>
-						</tr>
-					</tfoot>
-				</table>
-				<div id="paypalbuttons">
+			<div class="checkoutcontent">
+				<div id="checkoutinfo">
+					<div class="steamid64">
+						<h2>SteamID64</h2>
+						<p class="steamparagraph">Please fill in your SteamID64 so we can identify and give you your purchase ingame. SteamID64 is a public identification number for your steam account.</p>
+						<label for="steamid64">SteamID64:</label>
+						<input type="number" id="steamid64" name="steamid64" min="0" max="99999999999999999" onclick="clearattention()"><a href="https://steamid.io/" target="_blank" title="Find your SteamID64"><i class="fas fa-question-circle"></i></a>
+					</div>
+					<div class="steamid64 coupon">
+						<h2>Coupon Code</h2>
+						<label for="coupon">Coupon Code:</label>
+						<input type="text" id="coupon" name="coupon">
+					</div>
+					<div class="storeterms" id="storeterms">
+						<h2>Store Terms & Refund Policy</h2>
+						<p>Purchasing any items available in our<a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the rules in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
+						<br>
+						<p>Please be aware that receiving a full refund may restrict your account from making future purchases. In which case you will be notified.</p>
+						<br>
+						<p>Alpine reserves the right to modify any store item at will, with or without notice. This includes changing their price, content, and benefits of that item. However, rest assured that all benefit changes will be valid for server-balancing reasons.</p>
+						<br>
+						<p>Unless stated otherwise, Limited time store items are <b>not</b> permanently time-limited and may return in the future.</p>
+						<br>
+						<p>Providing an invalid Steam64ID will result in an automatic refund with the handling fees deducted. Presenting an incorrect Steam64ID is also acceptable for a refund with the handling fees deducted but will require contacting Alpine directly.</p>
+					</div>
+					<input type="checkbox" name="storetermscheck" id="storetermscheck" onclick="showpaypal()" class="storetermsapprove">
+					<label class="storetermsapprove" for="storetermscheck">I've read and understand the Store Terms</label>
+					<div id="paypalbuttons" style="display: none;">
+					</div>
+				</div>
+				<div class="checkoutcart">
+					<h2>Order Summary</h2>
+					<table id="cartlist" border="0" cellspacing="0" cellpadding="5px">
+							<thead>
+								<tr>
+									<th>Items (0)</th>
+									<th class="pricetd">Price $</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td>Total Price</td>
+									<td class="pricetd">$0</td>
+								</tr>
+							</tfoot>
+					</table>
 				</div>
 			</div>
 		</div>
-		<section class="lower">
+		<section class="lowerstore">
 			<div class="info">
 				<h1>Store Information</h1>
 				<div class="seperator"></div>
@@ -679,7 +683,7 @@
 				<p>Alpine is an Unturned server with an ambitious goal to reshape the War RP genre. But we can't do this without support from you! Please consider donating to Alpine so we can continue our quest and grow our server!</p>
 				<h2>Store Terms & Refund Policy</h2>
 				<p>
-				Purchasing any items available in our <a href="https://gamingtoday093.github.io/Alpine/store.html">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the rules in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
+				Purchasing any items available in our <a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the rules in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
 				<br>
 				<p>Please be aware that receiving a full refund may restrict your account from making future purchases. In which case you will be notified.</p>
 				<br>
@@ -715,11 +719,11 @@
 			<p translate="no">Alpine | WW1 | War RP | Kits</p>
 			<div class="seperator"><br></div>
 			<div class="legal">
-				<a href="https://gamingtoday093.github.io/Alpine/Legal/terms.html">Terms</a>
+				<a href="https://gamingtoday093.github.io/Alpine/Legal/terms">Terms</a>
 				<p>|</p>
-				<a href="https://gamingtoday093.github.io/Alpine/Legal/privacy.html">Privacy</a>
+				<a href="https://gamingtoday093.github.io/Alpine/Legal/privacy">Privacy</a>
 				<p>|</p>
-				<a href="https://gamingtoday093.github.io/Alpine/Legal/cookie.html">Cookie</a>
+				<a href="https://gamingtoday093.github.io/Alpine/Legal/cookie">Cookie</a>
 			</div>
 		</div>
 		<div class="overlay"></div>
@@ -741,7 +745,7 @@
 				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-home"></i> HOME</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/store.html"><i class="fas fa-store"></i> STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/store"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
 				<a href="https://gamingtoday093.github.io/Alpine/" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
@@ -755,7 +759,7 @@
 				<a href="https://gamingtoday093.github.io/Alpine/"><i class="fas fa-home"></i> HOME</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/store.html"><i class="fas fa-store"></i> STORE</a>
+				<a href="https://gamingtoday093.github.io/Alpine/store"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
 				<a href="https://gamingtoday093.github.io/Alpine/" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
