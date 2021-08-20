@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/store.css">
 	<script src="https://kit.fontawesome.com/49146c74ae.js" crossorigin="anonymous"></script>
-	<script src="https://www.paypal.com/sdk/js?client-id=ASKlj8y_RW8GFx7333-7nlftgRM-Rr2a3lbrr86A1nJz9dDrBgRl1wzHUtLCydGApChcbZ_2ZfZF2ttK"></script>
 	<meta name="description" content="Official Alpine Store! Purchase awesome items and play with even more authentic WW1 content!">
 	<meta name="keywords" content="Alpine, Unturned, Server, WW1 Complete, WW1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +13,8 @@
 <body>
 	<!--Background-->
 	<div class="background">
-		<video width="1920" height="1080" autoplay muted loop>
-  			<source src="https://cdn.discordapp.com/attachments/545016765885972494/857303290286309436/2018.11.25-21.10_Trim.mp4" type="video/mp4">
+		<video width="1920" height="1080" autoplay muted loop playsinline>
+  			<source src="https://cdn.discordapp.com/attachments/545016765885972494/875023131176222720/Alpine_Beta_Teaser.mp4" type="video/mp4">
   		</video>
 	</div>
 	<!--Main Content-->
@@ -24,7 +23,7 @@
 			<h1><i class="fas fa-store"></i> STORE</h1>
 			<div class="user" title="Store Manager">
 				<img src="styles\images\pfp2.png" alt="user" width="40" height="40">
-				<p><b>Store Manager:</b><br>Friedhelm (Kip meneer)</p>
+				<p><b>Store Manager:</b><br>Apyr (ApyrTheGreat)</p>
 			</div>
 			<div class="user" title="Checkout" id="userR">
 				<button id="cart" onclick="gotocheckout()">
@@ -626,22 +625,32 @@
 			<div class="seperator"><br></div>
 			<div class="checkoutcontent">
 				<div id="checkoutinfo">
-					<div class="steamid64">
-						<h2>SteamID64</h2>
-						<p class="steamparagraph">Please fill in your SteamID64 so we can identify and give you your purchase ingame. SteamID64 is a public identification number for your steam account.</p>
-						<label for="steamid64">SteamID64:</label>
-						<input type="number" id="steamid64" name="steamid64" min="0" max="99999999999999999" onclick="clearattention()"><a href="https://steamid.io/" target="_blank" title="Find your SteamID64"><i class="fas fa-question-circle"></i></a>
-					</div>
-					<div class="steamid64 coupon">
-						<h2>Coupon Code</h2>
-						<label for="coupon">Coupon Code:</label>
-						<input type="text" id="coupon" name="coupon">
+					<p class="steamparagraph">Order delivery times may vary greatly depending on the time of day and could reach up to 48 hours after purchase. However, we usually handle them within 2 hours after order. If you have not received your items after 48 hours <b>please</b> contact us immediately so we can resolve the situation.</p>
+					<div class="midcheckout">
+						<div class="steamid64">
+							<h2>SteamID64</h2>
+							<label for="steamid64">SteamID64: </label>
+							<div class="nowrap">
+								<input type="number" id="steamid64" name="steamid64" min="0" max="99999999999999999" placeholder="SteamID64" onclick="clearattention()"><a href="https://steamid.io/" target="_blank" title="Find your SteamID64"><i class="fas fa-question-circle"></i></a><i class="fas fa-times-circle validity" id="steamid64validity" title="Invalid SteamID64"></i>
+							</div>
+							<p class="steamparagraph">Please fill in your SteamID64 so we can identify and give you your purchase ingame. SteamID64 is a public identification number for your steam account.</p>
+						</div>
+						<div class="coupon">
+							<h2>Coupon Code</h2>
+							<label for="coupon">Coupon Code:</label>
+							<div class="nowrap">
+								<input type="text" spellcheck="false" id="coupon" name="coupon" placeholder="Coupon Code"><i class="fas fa-times-circle validity" id="couponvalidity" title="Invalid Coupon Code"></i>
+							</div>
+							<p class="steamparagraph">Redeem your coupon codes here! Please be aware that we do not allow intentionally utilizing falsified coupon codes.</p>
+						</div>
 					</div>
 					<div class="storeterms" id="storeterms">
 						<h2>Store Terms & Refund Policy</h2>
-						<p>Purchasing any items available in our<a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the rules in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
+						<p>Purchasing any item available in our<a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2545218634"target="_blank">rules</a> in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
 						<br>
 						<p>Please be aware that receiving a full refund may restrict your account from making future purchases. In which case you will be notified.</p>
+						<br>
+						<p>Store items that are team specific will not carry over between team swaps. But will rather stay saved to their designated team.</p>
 						<br>
 						<p>Alpine reserves the right to modify any store item at will, with or without notice. This includes changing their price, content, and benefits of that item. However, rest assured that all benefit changes will be valid for server-balancing reasons.</p>
 						<br>
@@ -683,9 +692,11 @@
 				<p>Alpine is an Unturned server with an ambitious goal to reshape the War RP genre. But we can't do this without support from you! Please consider donating to Alpine so we can continue our quest and grow our server!</p>
 				<h2>Store Terms & Refund Policy</h2>
 				<p>
-				Purchasing any items available in our <a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the rules in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
+				Purchasing any items available in our <a href="https://gamingtoday093.github.io/Alpine/store">store</a> accepts these terms and equals the action of you donating to the Alpine server and acquiring virtual items as a donation reward. <b>This transaction is final and we do not offer refunds under most circumstances.</b> If you are subject to a ban for breaking the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2545218634"target="_blank">rules</a> in the Alpine server, you will not be refunded on any transactions. Bans are at the full discretion of the Alpine moderation team who can update our rules at any time. There is no assurance in accessing the server, and if Alpine ceases operation all virtual items are forfeit. Refund requests concerning accidental purchases may be suitable for a full refund. Please contact us directly if you believe that you are applicable for a full refund.</p>
 				<br>
 				<p>Please be aware that receiving a full refund may restrict your account from making future purchases. In which case you will be notified.</p>
+				<br>
+				<p>Store items that are team specific will not carry over between team swaps. But will rather stay saved to their designated team.</p>
 				<br>
 				<p>Alpine reserves the right to modify any store item at will, with or without notice. This includes changing their price, content, and benefits of that item. However, rest assured that all benefit changes will be valid for server-balancing reasons.</p>
 				<br>
@@ -695,7 +706,7 @@
 				<h2>Contact</h2>
 				<p>If you have any other concerns or questions please contact us!
 				<br>
-				<b>Discord:</b> <a>discord.gg/example</a>
+				<b>Discord:</b> <a href="https://discord.gg/yPJb8c4YZm" target="_blank">discord.gg/yPJb8c4YZm</a>
 				<br>
 				<b>Email:</b> <a>AlpineExample@gmail.com</a>
 				</p>
@@ -716,7 +727,7 @@
 			<img src="styles\images\wave3.svg" alt="wave3">
 		</div>
 		<div class="max-width" id="store"> <!--max-width to make everything not go out too far on larger screens-->
-			<p translate="no">Alpine | WW1 | War RP | Kits</p>
+			<p translate="no">Alpine | WW1 | WW2 RP | Military RP | PvP | Kits</p>
 			<div class="seperator"><br></div>
 			<div class="legal">
 				<a href="https://gamingtoday093.github.io/Alpine/Legal/terms">Terms</a>
@@ -748,7 +759,7 @@
 				<a href="https://gamingtoday093.github.io/Alpine/store"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
+				<a href="https://discord.gg/yPJb8c4YZm" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
 			</li>
 		</ul>
 		</div>
@@ -762,13 +773,14 @@
 				<a href="https://gamingtoday093.github.io/Alpine/store"><i class="fas fa-store"></i> STORE</a>
 			</li>
 			<li>
-				<a href="https://gamingtoday093.github.io/Alpine/" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
+				<a href="https://discord.gg/yPJb8c4YZm" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
 			</li>
 		</ul>
 	</div>
 	</div>
 </body>
 	<!--Website scripts are loaded after all the elements are loaded-->
+	<script src="https://www.paypal.com/sdk/js?client-id=ASKlj8y_RW8GFx7333-7nlftgRM-Rr2a3lbrr86A1nJz9dDrBgRl1wzHUtLCydGApChcbZ_2ZfZF2ttK"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="global.js"></script>
 	<script src="store.js"></script>

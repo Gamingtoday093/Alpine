@@ -153,13 +153,14 @@
 	position: fixed;
 	bottom: 2em;
 	right: 1.5em;
+	white-space: nowrap;
 	color: white;
 	border-radius: 3em 1em 1em 1em;
 	padding: 1.5em 1em 1em 1.5em;
 	background-color: var(--blu);
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	z-index: 99;
 	opacity: 0;
 	visibility: collapse;
@@ -178,6 +179,7 @@
 	margin: 0;
 	font-size: 0.5em;
 	letter-spacing: 1px!important;
+	white-space: normal;
 }
 
 .cartnotification i {
@@ -252,6 +254,26 @@
 	transform: translateY(2.5px);
 }
 
+.validity {
+	font-size: 24px;
+	margin-left: 0.25em;
+	opacity: 0;
+	transition: opacity 0.5s, visibility 0.5s;
+	visibility: collapse;
+	animation-delay: 1s;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.smallerdiscount {
+	font-size: 0.75em;
+	font-style: normal;
+}
+
+#checkoutinfo h2 {
+	line-height: 2;
+}
+
 .checkoutcart {
 	background-color: #607d8b;
 	border-radius: 0.5em;
@@ -260,6 +282,7 @@
 	top: 68px;
 	margin-left: 2em;
 	padding: 1em;
+	transition: margin 0.5s;
 }
 
 .checkoutcart h2 {
@@ -292,7 +315,19 @@
 	height: 300px;
 	overflow: auto;
 	margin-bottom: 0.5em;
-	transition: font-size 0.5s, width 0.5s, height 0.5s;
+	padding: 0 0.5em 0.5em 0.5em;
+	border: 3px solid var(--dkblu);
+	background-color: var(--dkblu);
+	border-radius: 0.5em;
+	transition: font-size 0.5s, width 0.5s, height 0.5s, padding 0.5s;
+}
+
+.storeterms::-webkit-scrollbar-track {
+	background: inherit!important;
+}
+
+.storeterms::-webkit-scrollbar-thumb {
+	border: solid 0.25em var(--dkblu)!important;
 }
 
 .storeterms a {
@@ -312,14 +347,35 @@
 	transition: font-size 0.5s;
 }
 
-.coupon {
-	padding: 1em 0;
+.midcheckout {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	padding: 0 0 1.5em 0;
 }
 
-#steamid64 {
+.steamid64 {
+	min-width: 50%;
+}
+
+.coupon {
+	margin-left: 0.5em;
+}
+
+.midcheckout .steamparagraph {
+	margin-top: 0.75em;
+}
+
+.nowrap {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+#steamid64, #coupon {
 	border-radius: 5px;
 	height: 20px;
 	border: none;
+	font-family: 'Roboto', sans-serif;
 }
 
 .storetermsapprove:hover {
@@ -561,6 +617,10 @@ h2 > .price p {
 	font-family: 'Roboto', sans-serif!important;
 }
 
+.getprice {
+	display: none;
+}
+
 .kit {
 	border-color: white!important;
 }
@@ -571,6 +631,10 @@ h2 > .price p {
 
 .item {
 	border-color: rgb(0, 255, 170)!important;
+}
+
+.perk {
+	border-color: rgb(3, 174, 239)!important;
 }
 
 .price {

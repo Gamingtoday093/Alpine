@@ -43,18 +43,20 @@ if($(window).width() <= 1048) {
 
 // Get Player Count
 var text = document.getElementById("players");
+var maintenanceIcon = document.getElementById("maintenance");
 var playercount = 0;
 
 function getplayercount() {
 	text.style.cursor = "progress";
 	try {
 		//unturned server status
-		var url = "https://unturned-servers.net/api/?object=servers&element=detail&key=A8V57TBNKLVcGcABSMS5A26dWGDCMKKTgN5";
+		var url = "https://unturned-servers.net/api/?object=servers&element=detail&key=Gjb5A2qJm0sorkdNEtlvDzcNGDNT8MUvv1k";
 		$.when(
 		$.getJSON(url),
 		).done(function(result1, result2) {
 		playercount = result1.players;
-		$('#players').html("<i>" + playercount + '<b>/</b>28</i> Players Online');
+		maxplayers = result1.maxplayers;
+		$('#players').html("<i>" + playercount + '<b>/</b>' + maxplayers +'</i> Players Online');
 		switch(true) {
 		case (playercount <= 0):
 		text.getElementsByTagName("I")[0].style.color = "#cccccc";
@@ -66,10 +68,13 @@ function getplayercount() {
 		text.getElementsByTagName("I")[0].style.color = "orange";
 		break;
 		case (playercount <= 16):
-		text.getElementsByTagName("I")[0].style.color = "limegreen";
+		text.getElementsByTagName("I")[0].style.color = "rgb(64, 191, 105)";
 		break;
 		}
 		text.style.cursor = "pointer";
+		if (result1.password == true) {
+			maintenanceIcon.style.display = "block";
+		}
 		});
 	} catch(error) {
 		console.log(error);

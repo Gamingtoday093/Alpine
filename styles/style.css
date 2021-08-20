@@ -170,6 +170,7 @@ background-color: var(--gry);
 	margin: 0;
 }
 
+/* Desktop Screens */
 @media only screen and (min-width: 1390px) {
 .container {
 	padding: 0px 42px;
@@ -201,6 +202,7 @@ article img {
 
 }
 
+/* Tablet Screens */
 @media only screen and (max-width: 916px) {
 .header ul {
 	padding: 0px 30px 0px 15px;
@@ -235,6 +237,11 @@ body {
 .upper h1 {
 	font-size: 450%!important;
 	transition: font-size 0.5s;
+}
+
+#maintenance {
+	left: 350px!important;
+	transition: left 0.5s;
 }
 
 .upper h2 {
@@ -335,6 +342,21 @@ footer .max-width {
 	transition: height 0.5s, border-radius 0.5s, font-size 0.5s;
 }
 
+.checkoutcontent {
+	flex-direction: column-reverse;
+}
+
+.checkoutcart {
+	position: static!important;
+	margin-left: 0!important;
+	margin-bottom: 1.5em;
+	transition: margin 0.5s;
+}
+
+.checkout table {
+	width: 100%!important;
+}
+
 .lowerstore {
 	flex-direction: column!important;
 }
@@ -356,6 +378,7 @@ footer .max-width {
  	user-select: none;
 }
 
+/* Mobile Screens */
 @media only screen and (max-width: 695px) {
 .header {
 	overflow: auto;
@@ -423,6 +446,11 @@ footer .max-width {
 	transition: font-size 0.5s;
 }
 
+#maintenance {
+	left: 300px!important;
+	transition: left 0.5s;
+}
+
 .upper h2 {
 	font-size: 125%!important;
 	transition: font-size 0.5s;
@@ -487,11 +515,7 @@ footer .max-width {
 	min-width: 295px!important;
 	max-height: 100%!important;
 	width: 90%!important;
-}
-
-.checkout table {
-	padding: 1.5em 1em 1.5em 1em!important;
-	transition: padding 0.5s;
+	height: 90%!important;
 }
 
 .storeterms, .steamparagraph, .storetermsapprove {
@@ -668,6 +692,7 @@ footer .max-width {
 	text-align: center;
 	font-size: 500%;
 	transition: font-size 0.5s;
+	position: relative;
 	margin: 0 auto;
 	text-shadow: 10px 12px 3px rgba(0,0,0,0.5);
 }
@@ -680,6 +705,16 @@ footer .max-width {
 	transition: font-size 0.5s;
 	margin: 0 auto;
 	text-shadow: 10px 12px 5px rgba(0,0,0,0.5);
+}
+
+#maintenance {
+	color: darkorange;
+	position: absolute;
+	top: -7.5px;
+	right: 0px;
+	left: 400px;
+	transition: left 0.5s;
+	display: none;
 }
 
 .upper p {
@@ -1168,4 +1203,8 @@ button:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
 	background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-corner {
+	background: var(--blu);
 }
