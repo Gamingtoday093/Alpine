@@ -286,19 +286,27 @@ function showpaypal() {
 	allitemstostring();
 }
 
+// phptesting
 var phptest = document.getElementById("phptest");
+var result = "";
 function clearattention() {
 	steamid64.style = "";
 	phptest.innerHTML = "";
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			phptest.innerHTML = this.responseText;
+			result = this.responseText;
 		}
 	};
 	var coupon = "test";
 	xmlhttp.open("GET", "dbhandler.php?c="+coupon, true);
 	xmlhttp.send();
+
+	if (result === "true") {
+		phptest.innerHTML = "TRUE"
+	} else if (result === "false") {
+		phptest.innerHTML = "FALSE"
+	}
 }
 
 function checkforduplicates() {

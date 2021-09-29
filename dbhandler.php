@@ -25,10 +25,10 @@ $sql = "SELECT * FROM AlpineCoupon_data WHERE Coupon = '".$c."'";
 $result = mysqli_query($conn, $sql);
 
 if (!$result) {
-	echo "Not a Coupon";
+	echo "false";
 }
 else {
-	echo "Coupon";
+	echo "true";
 }
 
 mysqli_close($conn);
