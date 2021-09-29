@@ -792,6 +792,7 @@ footer .max-width {
 	left: 50%;
 	transform: translate(-50%);
 	bottom: 3em;
+	white-space: nowrap;
 }
 
 .upper button:hover {
