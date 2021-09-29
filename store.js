@@ -288,6 +288,16 @@ function showpaypal() {
 
 function clearattention() {
 	steamid64.style = "";
+	steamid64.placeholder = "";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			steamid64.placeholder = this.responseText;
+		}
+	};
+	var coupon = "test";
+	xmlhttp.open("GET", "dbhandler.php?c="+coupon, true);
+	xmlhttp.send();
 }
 
 function checkforduplicates() {
