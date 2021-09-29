@@ -288,11 +288,11 @@ function showpaypal() {
 
 function clearattention() {
 	steamid64.style = "";
-	steamid64.placeholder = "";
+	steamid64.innerHTML = "";
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			steamid64.placeholder = this.responseText;
+			steamid64.innerHTML = this.responseText;
 		}
 	};
 	var coupon = "test";

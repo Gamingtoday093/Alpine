@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
 <?php
 
 $serverName = "jdbc:mysql://u660_14N6khWoP2:^SC!GnaqkjK!Ll0!Nhy=StxF@116.202.241.175:3306/s660_Test";
@@ -26,3 +32,8 @@ else {
 }
 
 mysqli_close($conn);
+
+?>
+
+</body>
+</html>
