@@ -608,7 +608,7 @@
 
 h2 > .price p {
 	padding-top: 0.4em;
-	font-size: 0.6em!important;
+	font-size: 0.8em!important;
 	text-align: center;
 	margin: auto;
 }
@@ -629,7 +629,7 @@ h2 > .price p {
 	border-color: rgb(255, 0, 76)!important;
 }
 
-.item {
+.OneTime {
 	border-color: rgb(0, 255, 170)!important;
 }
 
@@ -674,7 +674,7 @@ h2 > .price p {
 	overflow: hidden;
 	max-height: var(--height1);
 	text-align: left;
-	transition: max-height 1.25s, padding 0.5s;
+	transition: max-height 0.75s, padding 0.5s;
 	padding: 0.5em;
 	padding: var(--padding1);
 	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 90%);
@@ -703,6 +703,7 @@ h2 > .price p {
 
 .iteminfogrid p, .ingamestats {
 	grid-column: 1 / 2 span;
+	text-shadow: 0 0 5px black;
 }
 
 .storeitemlist .iteminfogrid {
@@ -726,6 +727,17 @@ h2 > .price p {
 	font-size: 1em;
 	text-align: left; /*IE*/
 	text-align: initial;
+}
+
+.bundleinfo {
+
+}
+
+.bundleinfo li {
+	min-width: auto!important;
+	height:	auto!important;
+	background-image: none!important;
+	border: none!important;
 }
 
 .ingamestats button {
@@ -787,8 +799,8 @@ h2 > .price p {
 }
 
 .allstoreitems li {
-	height: 17.5em;
-	min-width: 380px;
+	height: 22em;
+	min-width: 480px;
 	text-align: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -816,6 +828,8 @@ h2 > .price p {
 	padding-top: var(--padding3);
 	font-size: 1.5em;
 	letter-spacing: 1.35px;
+	text-shadow: 0 0 5px black;
+	transition: padding 0.5s;
 }
 
 .storeitemlistarea {
@@ -891,14 +905,34 @@ h2 > .price p {
 }
 
 /*Background Images*/
-.bakBE {
-	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777689219210/93680AEFBA38E5FE544ADE504FEF1D358517A868/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true')!important;
-}
-
-.bakpaint {
+.bakPaint {
 	background-image: url('storeimages/Paint.png')!important;
 }
 
+.bakStormBundle {
+	background-image: url('storeimages/ST+.png')!important;
+}
+
 .bakStorm {
-	background-image: url('https://steamuserimages-a.akamaihd.net/ugc/779601777689221608/0D4A6945059AEF98691CB0F4E81F05729A0BCEE3/')!important;
+	background-image: url('storeimages/ST.png')!important;
+}
+
+.bakFRBundle {
+	background-image: url('storeimages/FR+.png')!important;
+}
+
+.bakPilot2G {
+	background-image: url('storeimages/Pilot2G.png')!important;
+}
+
+.bakRelease {
+	background-image: url('storeimages/Release.png')!important;
+}
+
+.bakVault {
+	background-image: url('storeimages/VaultExtra.png')!important;
+}
+
+.bakQueue {
+	background-image: url('storeimages/QueuePriority.png')!important;
 }

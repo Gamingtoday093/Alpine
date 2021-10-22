@@ -9,9 +9,9 @@ function ScrollitemsR(list, bL, bR) {
 	maxscroll = $('#' + list)[0].scrollWidth - $('#' + list)[0].clientWidth;
 	buttonL = document.getElementById(bL);
 	buttonR = document.getElementById(bR);
-	storelist.scrollLeft += 311;
+	storelist.scrollLeft += 500;
 	buttonL.style.display = "block";
-	if ((storelist.scrollLeft + 311) >= maxscroll) {
+	if ((storelist.scrollLeft + 500) >= maxscroll) {
 		buttonR.style.display = "none";
 	}
 }
@@ -20,10 +20,27 @@ function ScrollitemsL(list, bL, bR) {
 	storelist = document.getElementById(list);
 	buttonL = document.getElementById(bL);
 	buttonR = document.getElementById(bR);
-	storelist.scrollLeft -= 311;
+	storelist.scrollLeft -= 500;
 	buttonR.style.display = "block";
-	if ((storelist.scrollLeft - 311) <= 0) {
+	if ((storelist.scrollLeft - 500) <= 0) {
 		buttonL.style.display = "none";
+	}
+}
+
+function showscroll() {
+	width = document.getElementById("maxstoreitems");
+	bR = document.getElementById("bundlebuttonR");
+	bL = document.getElementById("bundlebuttonL");
+	iR = document.getElementById("itembuttonR");
+	iL = document.getElementById("itembuttonL");
+	if (width.clientWidth == "1350") {
+		bR.style.display = "none";
+		bL.style.display = "none";
+		iR.style.display = "none";
+		iL.style.display = "none";
+	} else {
+		bR.style.display = "block";
+		iR.style.display = "block";
 	}
 }
 
@@ -287,26 +304,27 @@ function showpaypal() {
 }
 
 // phptesting
-var phptest = document.getElementById("phptest");
-var result = "";
+//var phptest = document.getElementById("phptest");
+//var result = "";
+//phptest.innerHTML = "";
+//var xmlhttp = new XMLHttpRequest();
+//xmlhttp.onreadystatechange = function() {
+//	if (this.readyState == 4 && this.status == 200) {
+//		result = this.responseText;
+//	}
+//};
+//var coupon = "test";
+//xmlhttp.open("GET", "dbhandler.php?c="+coupon, true);
+//xmlhttp.send();
+//
+//if (result === "true") {
+//	phptest.innerHTML = "TRUE"
+//} else if (result === "false") {
+//	phptest.innerHTML = "FALSE"
+//}
+
 function clearattention() {
 	steamid64.style = "";
-	phptest.innerHTML = "";
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			result = this.responseText;
-		}
-	};
-	var coupon = "test";
-	xmlhttp.open("GET", "dbhandler.php?c="+coupon, true);
-	xmlhttp.send();
-
-	if (result === "true") {
-		phptest.innerHTML = "TRUE"
-	} else if (result === "false") {
-		phptest.innerHTML = "FALSE"
-	}
 }
 
 function checkforduplicates() {
