@@ -37,71 +37,32 @@
 		<section class="featured">
 			<h1>Featured</h1>
 			<ul>
-				<li class="kit bakPilot2G">
-					<div class="iteminfogrid">
-						<h3>Kit skin</h3>
-					<div class="price">
-						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p class="pricespace">Price:<p class="getprice">4</p></p>
-					</div>
-					<div class="ingamestats">
-						<p>Kit: <code>/kit DEPilotUniform2</code></p>
-						<p>Team Specific: <code>Central</code></p>
-						<p>Contents: <code><br>1x Pilot Cap<br>1x Pilot Goggles<br>1x German Pilot Coat<br>1x German Pilot Pants<br>1x German Pilot Scarf</code></p>
-						<p>Cooldown: <code>N/A</code></p>
-						<button onclick="addtocart('German Pilot Uniform', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-					</div>
-						<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
-						<p>Tired of wearing the <b>Full-Body Suit Pilot Uniform</b> then This is the Uniform you've been looking for! Get this completely different <b>German Pilot Uniform</b> that makes you really stand out from your Pilot Companions!</p>
-					</div>
-					<h2>German Pilot Uniform
-						<div class="price">
-							<p class="getprice">4</p>
-						</div>
-					</h2>
+				<li class="kit bakPilot2G generateItem">
+					<p class="name">German Pilot Uniform</p>
+					<p class="kit">DEPilotUniform2</p>
+					<p class="team">Central</p>
+					<p class="content"><br>1x Pilot Cap<br>1x Pilot Goggles<br>1x German Pilot Coat<br>1x German Pilot Pants<br>1x German Pilot Scarf</p>
+					<p class="cooldown">N/A</p>
+					<p class="price">4</p>
+					<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
+					<p class="desc">Tired of wearing the <b>Full-Body Suit Pilot Uniform</b> then This is the Uniform you've been looking for! Get this completely different <b>German Pilot Uniform</b> that makes you really stand out from your Pilot Companions!</p>
 				</li>
-				<li class="OneTime bakRelease">
-					<div class="iteminfogrid">
-						<h3>Kit skin (One Time)</h3>
-					<div class="price">
-						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p class="pricespace">Price:<p class="getprice">2</p></p>
-					</div>
-					<div class="ingamestats">
-						<p>Kit: <code>/kit AlpineReleaseUniform</code></p>
-						<p>Contents: <code><br>1x British Colonial Pith Helmet<br>1x Monocle</code></p>
-						<p>Cooldown: <code>N/A</code></p>
-						<button onclick="addtocart('Release Cosmetics', '2')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-					</div>
-						<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b> - <i>SOLD ONLY ONCE</i></p>
-						<p>With the final release of <b>Alpine</b>, We Celeberate this Occasion by releasing a one time Exclusive Release Cosmetic</p>
-					</div>
-					<h2>Alpine Release Cosmetics
-						<div class="price">
-							<p class="getprice">2</p>
-						</div>
-					</h2>
+				<li class="OneTime bakRelease generateItem">
+					<p class="name">Alpine Release Cosmetics</p>
+					<p class="kit">AlpineReleaseUniform</p>
+					<p class="content"><br>1x British Colonial Pith Helmet<br>1x Monocle</p>
+					<p class="cooldown">N/A</p>
+					<p class="price">2</p>
+					<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b> - <i>SOLD ONLY ONCE</i></p>
+					<p class="desc">With the final release of <b>Alpine</b>, We Celeberate this Occasion by releasing a one time Exclusive Release Cosmetic</p>
 				</li>
-				<li class="kit bakPaint">
-					<div class="iteminfogrid">
-						<h3>Kit skin</h3>
-					<div class="price">
-						<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-						<p class="pricespace">Price:<p class="getprice">5</p></p>
-					</div>
-					<div class="ingamestats">
-						<p>Kit: <code>/kit Paint48h</code></p>
-						<p>Contents: <code>2x Paint items</code></p>
-						<p>Cooldown: <code>48 hours</code></p>
-						<button onclick="addtocart('Paint Bucket Kit', '5')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-					</div>
-						<p>Get your hands on the <b>best way</b> to customize your vehicles with this <b>Paint bucket kit!</b> Simply craft together the paint bucket and a compatible vehicle of your choice and enjoy your new stylish decals or camouflage!</p>
-					</div>
-					<h2>Paint Bucket Kit
-						<div class="price">
-							<p class="getprice">5</p>
-						</div>
-					</h2>
+				<li class="kit bakPaint generateItem">
+					<p class="name">Paint Bucket Kit</p>
+					<p class="kit">Paint48h</p>
+					<p class="content">2x Paint items</p>
+					<p class="cooldown">48 hours</p>
+					<p class="price">5</p>
+					<p class="desc">Get your hands on the <b>best way</b> to customize your vehicles with this <b>Paint bucket kit!</b> Simply craft together the paint bucket and a compatible vehicle of your choice and enjoy your new stylish decals or camouflage!</p>
 				</li>
 			</ul>
 		</section>
@@ -196,94 +157,42 @@
 					<button class="moreitems" onclick="ScrollitemsL('uniformlist', 'uniformbuttonL', 'uniformbuttonR')"><i class="fas fa-angle-right"></i></button>
 				</div>
 				<ul class="storeitemlist" id="uniformlist">
-					<li class="kit bakPilot2G">
-						<div class="iteminfogrid">
-							<h3>Kit skin</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p class="pricespace">Price:<p class="getprice">4</p></p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit DEPilotUniform2</code></p>
-							<p>Team Specific: <code>Central</code></p>
-							<p>Contents: <code><br>1x Pilot Cap<br>1x Pilot Goggles<br>1x German Pilot Coat<br>1x German Pilot Pants<br>1x German Pilot Scarf</code></p>
-							<p>Cooldown: <code>N/A</code></p>
-							<button onclick="addtocart('German Pilot Uniform', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
-							<p>Tired of wearing the <b>Full-Body Suit Pilot Uniform</b> then This is the Uniform you've been looking for! Get this completely different <b>German Pilot Uniform</b> that makes you really stand out from your Pilot Companions!</p>
-						</div>
-						<h2>German Pilot Uniform
-							<div class="price">
-								<p class="getprice">4</p>
-							</div>
-						</h2>
+					<li class="kit bakPilot2G generateItem">
+						<p class="name">German Pilot Uniform</p>
+						<p class="kit">DEPilotUniform2</p>
+						<p class="team">Central</p>
+						<p class="content"><br>1x Pilot Cap<br>1x Pilot Goggles<br>1x German Pilot Coat<br>1x German Pilot Pants<br>1x German Pilot Scarf</p>
+						<p class="cooldown">N/A</p>
+						<p class="price">4</p>
+						<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
+						<p class="desc">Tired of wearing the <b>Full-Body Suit Pilot Uniform</b> then This is the Uniform you've been looking for! Get this completely different <b>German Pilot Uniform</b> that makes you really stand out from your Pilot Companions!</p>
 					</li>
-					<li class="OneTime bakRelease">
-						<div class="iteminfogrid">
-							<h3>Kit skin (One Time)</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p class="pricespace">Price:<p class="getprice">2</p></p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit AlpineReleaseUniform</code></p>
-							<p>Contents: <code><br>1x British Colonial Pith Helmet<br>1x Monocle</code></p>
-							<p>Cooldown: <code>N/A</code></p>
-							<button onclick="addtocart('Release Cosmetics', '2')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b> - <i>SOLD ONLY ONCE</i></p>
-							<p>With the final release of <b>Alpine</b>, We Celeberate this Occasion by releasing a one time Exclusive Release Cosmetic</p>
-						</div>
-						<h2>Alpine Release Cosmetics
-							<div class="price">
-								<p class="getprice">2</p>
-							</div>
-						</h2>
+					<li class="OneTime bakRelease generateItem">
+						<p class="name">Alpine Release Cosmetics</p>
+						<p class="kit">AlpineReleaseUniform</p>
+						<p class="content"><br>1x British Colonial Pith Helmet<br>1x Monocle</p>
+						<p class="cooldown">N/A</p>
+						<p class="price">2</p>
+						<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b> - <i>SOLD ONLY ONCE</i></p>
+						<p class="desc">With the final release of <b>Alpine</b>, We Celeberate this Occasion by releasing a one time Exclusive Release Cosmetic</p>
 					</li>
-					<li class="kit bakStorm">
-						<div class="iteminfogrid">
-							<h3>Kit skin</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p class="pricespace">Price:<p class="getprice">4</p></p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit StormUniform</code></p>
-							<p>Team Specific: <code>Central</code></p>
-							<p>Contents: <code><br>1x German Stormtrooper Helmet<br>1x German Late War Shirt<br>1x German Late War Pants<br>1x German Infantry Carrier<br>1x German Stormtrooper Backpack</code></p>
-							<p>Cooldown: <code>N/A</code></p>
-							<button onclick="addtocart('StormUniform', '4')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
-							<p>Get this awesome uniform and become a <b>Storm Trooper</b>! Since their creation as a German army unit in 1915, the <b>Storm troopers</b> or <b>Sturmtruppen</b>, have led many of the successful German offensives of the war. Highly trained and equipped to the teeth, they are able to clear machine-gun nests and trenches, leading the way for friendly infantrymen, and bring glory to the German Empire!</p>
-						</div>
-						<h2>Sturmtruppen Uniform
-							<div class="price">
-								<p class="getprice">4</p>
-							</div>
-						</h2>
+					<li class="kit bakStorm generateItem">
+						<p class="name">Sturmtruppen Uniform</p>
+						<p class="kit">StormUniform</p>
+						<p class="team">Central</p>
+						<p class="content"><br>1x German Stormtrooper Helmet<br>1x German Late War Shirt<br>1x German Late War Pants<br>1x German Infantry Carrier<br>1x German Stormtrooper Backpack</p>
+						<p class="cooldown">N/A</p>
+						<p class="price">4</p>
+						<p class="limited"><i class="far fa-clock"></i> <b><u>LIMITED TIME OFFER</u></b></p>
+						<p class="desc">Get this awesome uniform and become a <b>Storm Trooper</b>! Since their creation as a German army unit in 1915, the <b>Storm troopers</b> or <b>Sturmtruppen</b>, have led many of the successful German offensives of the war. Highly trained and equipped to the teeth, they are able to clear machine-gun nests and trenches, leading the way for friendly infantrymen, and bring glory to the German Empire!</p>
 					</li>
-					<li class="kit bakPaint">
-						<div class="iteminfogrid">
-							<h3>Kit skin</h3>
-						<div class="price">
-							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p class="pricespace">Price:<p class="getprice">5</p></p>
-						</div>
-						<div class="ingamestats">
-							<p>Kit: <code>/kit Paint48h</code></p>
-							<p>Contents: <code>2x Paint items</code></p>
-							<p>Cooldown: <code>48 hours</code></p>
-							<button onclick="addtocart('Paint Bucket Kit', '5')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
-						</div>
-							<p>Get your hands on the <b>best way</b> to customize your vehicles with this <b>Paint bucket kit!</b> Simply craft together the paint bucket and a compatible vehicle of your choice and enjoy your new stylish decals or camouflage!</p>
-						</div>
-						<h2>Paint Bucket Kit
-							<div class="price">
-								<p class="getprice">5</p>
-							</div>
-						</h2>
+					<li class="kit bakPaint generateItem">
+						<p class="name">Paint Bucket Kit</p>
+						<p class="kit">Paint48h</p>
+						<p class="content">2x Paint items</p>
+						<p class="cooldown">48 hours</p>
+						<p class="price">5</p>
+						<p class="desc">Get your hands on the <b>best way</b> to customize your vehicles with this <b>Paint bucket kit!</b> Simply craft together the paint bucket and a compatible vehicle of your choice and enjoy your new stylish decals or camouflage!</p>
 					</li>
 				</ul>
 			</div>
@@ -301,19 +210,19 @@
 							<h3>Perk</h3>
 						<div class="price">
 							<img src="styles\images\dollar-signs-icon.png" alt="Currency" width="20" height="20">
-							<p class="pricespace">Price:<p class="getprice">5</p></p>
+							<p class="pricespace">Price:<p class="getprice">1</p></p>
 						</div>
 						<div class="ingamestats">
 							<p>Perk: <code>Vault</code></p>
 							<p>Vault: <code>Extra (48 slots)</code></p>
 							<p>Access: <code>/vault Extra</code></p>
-							<button onclick="addtocart('Extra Vault', '5')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+							<button onclick="addtocart('Extra Vault', '1')">Add to Cart <i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
 						</div>
 							<p>Finally, the <b>Solution</b> to fit all your possessions into your personal Vault is here! The <b>Extra Vault</b> let's you easily expand your personal storage without any hassle! <i>Of course you keep your original <b>Default Vault</b> too!</i></p>
 						</div>
 						<h2>Additional "Extra" Vault!
 							<div class="price">
-								<p class="getprice">5</p>
+								<p class="getprice">1</p>
 							</div>
 						</h2>
 					</li>
@@ -505,7 +414,11 @@
 				<a href="https://discord.gg/yPJb8c4YZm" translate="no"><i class="fab fa-discord"></i> DISCORD</a>
 			</li>
 		</ul>
+		</div>
 	</div>
+	<!--Intro-->
+	<div class="intro">
+		<img src="styles\images\intro.svg" alt="intro" width="100%" height="auto">
 	</div>
 </body>
 	<!--Website scripts are loaded after all the elements are loaded-->

@@ -44,28 +44,6 @@ function showscroll() {
 	}
 }
 
-// Get prices
-// xe.com
-var euromultiplier = 0.85240782;
-var poundmultiplier = 0.72181503;
-var prices = document.getElementsByClassName("getprice");
-getprice();
-function getprice() {
-	for (var i = 0; i < prices.length; i++) {
-		var price = parseFloat(prices[i].innerHTML);
-		var priceEuro = (price * euromultiplier).toFixed(2);
-		var pricePound = (price * poundmultiplier).toFixed(2);
-		var extra = prices[i].firstElementChild;
-		if (extra === null) {
-			extra = "";
-		} else {
-			extra = "<i class='far fa-clock'></i>";
-		}
-		prices[i].innerHTML = "$" + price + " / " + priceEuro + "€ / £" + pricePound + " " + extra;
-		prices[i].style.display = "block";
-	}
-}
-
 // Add to Cart
 var notif = document.getElementById("cartnotification");
 var carticon = document.getElementById("items");
@@ -110,6 +88,126 @@ function addtocart(item, price) {
 	} else {
 	notif.style.animationName = "shownotif";
 	toclear = setTimeout(() => { notif.style.animationName = "hidevideo"; }, 2000);
+	}
+}
+
+// Generate Items
+var gItems = document.getElementsByClassName("generateItem");
+generateItems();
+function generateItems() {
+	for (var i = 0; i < gItems.length; i++) {
+		const newDiv = document.createElement("div");
+		const itemType = document.createElement("h3");
+		switch (gItems[i].className.split(" ")[0]) {
+			case "kit":
+				itemType.appendChild(document.createTextNode("Kit skin"));
+				break;
+			case "bundle":
+				itemType.appendChild(document.createTextNode("Kit bundle"));
+				break;
+			case "OneTime":
+				itemType.appendChild(document.createTextNode("Kit skin (One Time)"));
+				break;
+			case "perk":
+				itemType.appendChild(document.createTextNode("Perk"));
+				break;
+		}
+
+		newDiv.className = "iteminfogrid";
+		newDiv.appendChild(itemType);
+
+		var price = gItems[i].getElementsByClassName("price")[0].innerHTML;
+		const priceDiv = document.createElement("div");
+		const priceImg = document.createElement("img");
+		const pricespaceP = document.createElement("p");
+		const priceP = document.createElement("p");
+		priceDiv.className = "price";
+		priceImg.src = "styles/images/dollar-signs-icon.png";
+		priceImg.alt = "Currency";
+		priceImg.width = "20";
+		priceImg.height = "20";
+		pricespaceP.className = "pricespace";
+		pricespaceP.innerHTML = "Price:";
+		priceP.className = "getprice";
+		priceP.innerHTML = `${price}`
+
+		priceDiv.appendChild(priceImg);
+		priceDiv.appendChild(pricespaceP);
+		priceDiv.appendChild(priceP);
+		newDiv.appendChild(priceDiv);
+
+		var name = gItems[i].getElementsByClassName("name")[0].innerHTML;
+		var kit = gItems[i].getElementsByClassName("kit")[0].innerHTML;
+		var content = gItems[i].getElementsByClassName("content")[0].innerHTML;
+		var cooldown = gItems[i].getElementsByClassName("cooldown")[0].innerHTML;
+		const statsDiv = document.createElement("div");
+		const kitP = document.createElement("p");
+		const contentP = document.createElement("p");
+		const cooldownP = document.createElement("p");
+		const buyButton = document.createElement("button");
+		statsDiv.className = "ingamestats";
+		kitP.innerHTML = `Kit: <code>/kit ${kit}</code>`
+		contentP.innerHTML = `Contents: <code>${content}</code>`
+		cooldownP.innerHTML = `Cooldown: <code>${cooldown}</code>`
+		buyButton.innerHTML = "Add to Cart <i class='fas fa-shopping-cart' aria-hidden='true'></i>"
+		buyButton.setAttribute("onclick", `addtocart('${name}', '${price}')`);
+
+		statsDiv.appendChild(kitP);
+
+		var isTeam = gItems[i].getElementsByClassName("team");
+		if (isTeam.length > 0) {
+			var team = isTeam[0].innerHTML;
+			const teamP = document.createElement("p");
+			teamP.innerHTML = `Team Specific: <code>${team}</code>`
+			statsDiv.appendChild(teamP);
+		}
+
+		statsDiv.appendChild(contentP);
+		statsDiv.appendChild(cooldownP);
+		statsDiv.appendChild(buyButton);
+		newDiv.appendChild(statsDiv);
+
+		var isLimited = gItems[i].getElementsByClassName("limited");
+		if (isLimited.length > 0) {
+			var limited = isLimited[0].innerHTML;
+			const limitedP = document.createElement("p");
+			limitedP.className = "limited";
+			limitedP.innerHTML = limited;
+			newDiv.appendChild(limitedP);
+		}
+
+		const descP = document.createElement("p");
+		descP.innerHTML = gItems[i].getElementsByClassName("desc")[0].innerHTML;
+		newDiv.appendChild(descP);
+
+		const titleText = document.createElement("h2");
+		titleText.innerHTML = `${name}<div class='price'><p class="getprice">${price}</p></div>`;
+
+		gItems[i].innerHTML = "";
+		gItems[i].appendChild(newDiv);
+		gItems[i].appendChild(titleText);
+	}
+}
+
+// Get prices
+// xe.com
+var euromultiplier = 0.85240782;
+var poundmultiplier = 0.72181503;
+var prices = document.getElementsByClassName("getprice");
+getprice();
+function getprice() {
+	for (var i = 0; i < prices.length; i++) {
+		var price = parseFloat(prices[i].innerHTML);
+		var priceEuro = (price * euromultiplier).toFixed(2);
+		var pricePound = (price * poundmultiplier).toFixed(2);
+		var extra = prices[i].firstElementChild;
+		if (extra === null) {
+			extra = "";
+		} else {
+			extra = "<i class='far fa-clock'></i>";
+		}
+		prices[i].innerHTML = "$" + price + " / " + priceEuro + "€ / £" + pricePound + " " + extra;
+		prices[i].style.display = "block";
 	}
 }
 
@@ -175,13 +273,16 @@ paypal.Buttons({
         	quantity: '1',
         	sku: '03'
         }],
-        web_profile: [{
-        	"input_fields": {
- 					  "no_shipping": 1,
-  					"address_override": 0
-					}
-        }]
-    	}]
+    	}],
+    	application_context: {
+      	shipping_preference: 'NO_SHIPPING'
+      },
+      web_profile: [{
+        "input_fields": {
+ 				  "no_shipping": 1,
+  				"address_override": 0
+				}
+      }]
     });
 	},
   onApprove: function(data, actions) {
@@ -285,7 +386,7 @@ function showpaypal() {
 		return;
 	}
 
-	if (checkforduplicates() == true) {
+	if (checkforduplicates() === true) {
 		alert("Warning! We've detected duplicate items in your purchase, unless you intend to gift an item to a friend we suggest you remove them as you may only have one specific item per steam account!")
 	}
 
@@ -328,24 +429,18 @@ function clearattention() {
 }
 
 function checkforduplicates() {
-	if (cart.length > 0) {
-		let unique = [];
-		for (var i = cart.length - 1; i >= 0; i--) {
-			if (unique.length == 0) {
-				unique.push(cart[i][0])
-			} else {
-				for (var g = unique.length - 1; g >= 0; g--) {
-					if (cart[i][0] != unique[g]) {
-						unique.push(cart[i][0])
-					} else if (cart[i][0] === unique[g]) {
-						return true;
-					} else {
-						return false;
-					}
-				}
-			}
+	if (cart.length == 0) {
+		return false;
+	}
+	let unique = [];
+	for (var i = cart.length - 1; i >= 0; i--) {
+		if (unique.includes(cart[i][0])) {
+			return true;
+		} else {
+			unique.push(cart[i][0]);
 		}
 	}
+	return false;
 }
 
 // Check Validity of steamID64 and Coupon
