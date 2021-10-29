@@ -7,11 +7,15 @@
 :root {
 	--supporter: #e74c3c;
 	--supporterxx: #992d22;
+	--infoOpacity: 0;
+	--infoHeight: 0;
+	--infoVisibility: hidden;
+	--arrowSize: 15px;
 }
 
 .selectplan {
 	width: 100%;
-	height: 500px; /*Remove this later*/
+	/*height: 500px; Remove this later*/
 	display: flex;
 	align-content: center;
 	justify-content: center;
@@ -20,13 +24,21 @@
 
 .plan {
 	width: 50%;
+	min-height: 400px;
 	transition: width 0.5s;
 	padding: 2em 3em 2em 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .plan:hover {
 	width: 75%!important;
 	transition: width 0.5s;
+	justify-content: flex-start;
+	--infoOpacity: 1;
+	--infoHeight: 300px;
+	--infoVisibility: visible;
 }
 
 #S {
@@ -66,15 +78,42 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	place-content: center;
+	opacity: var(--infoOpacity);
+	height: var(--infoHeight);
+	visibility: var(--infoVisibility);
+	transition: opacity 0.5s, height 0.5s, visibility 0.5s;
+}
+
+.arrow::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 50%;
+	top: calc(var(--arrowSize) * -1);
+	transform: translateX(-50%);
+	display: block;
+	border: 0;
+	border-left: var(--arrowSize) solid transparent;
+	border-right: var(--arrowSize) solid transparent;
+	border-bottom: var(--arrowSize) solid rgba(0,0,0,0.3);
 }
 
 .infoplan ul {
 	background-color: rgba(0,0,0,0.3);
 	padding: 1em;
+	position: relative;
+	margin: 0 0 1em 0;
 }
 
 .infoplan li {
 	list-style-type: none;
+	text-shadow: 1px 1px 10px rgb(0 0 0 / 80%);
+	width: fit-content;
+	padding-bottom: 0.1em;
+	margin-bottom: 0.25em;
+	border-bottom: 3px solid white;
 }
 
 .infoplan button {

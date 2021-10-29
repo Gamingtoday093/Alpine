@@ -18,19 +18,20 @@
 			<h1 class="headplan">Supporter</h1>
 			<div class="infoplan">
 				<ul class="perks">
+					<div class="arrow"></div>
 					<li>Exclusive <p style="display: inline-block;margin: 0;color: var(--supporter);">Supporter</p> Discord role</li>
 					<li>Access to #supporter-lounge, a place to hangout and chat with Alpine staff & other supporters!</li>
 					<li>Access to sneakpeeks and <b>supporter exclusive</b> news, competitions, events and a like in #supporter-rewards</li>
 					<li>Access to #supporter-suggestions that are almost <b>guaranteed</b> to be added to the game</li>
 					<li>Access to <b>Queue Priority</b></li>
 					<li>Access to <b>Supporter Vault</b> <i>(64 slots)</i></li>
-					<li>Given <b>10x Paint Buckets</b> monthly</li>
+					<li>Given <b>5x Paint Buckets</b> monthly</li>
 				</ul>
-				<button>Select This Plan</button>
+				<button onclick="keepplanopen('S', 'SXX')">Select This Plan</button>
 			</div>
 		</div>
 		<div class="splitter">
-			<svg viewBox="0 0 52 200" preserveAspectRatio="none" height="1em" width="1em" style="background-color: var(--supporterxx);height: 100%; width: 100%;">
+			<svg viewBox="0 0 52 200" preserveAspectRatio="none" height="1em" width="1em" style="background-color: var(--supporterxx);height: 100%; width: 100px;">
   				<polygon points="0,0 0,200 52,200" style="fill:var(--supporter);" />
 			</svg>
 		</div>
@@ -38,6 +39,7 @@
 			<h1 class="headplan">Supporter<p class="larger">+ +</p></h1>
 			<div class="infoplan">
 				<ul class="perks">
+					<div class="arrow"></div>
 					<li>Exclusive <p style="display: inline-block;margin: 0;color: var(--supporterxx);">Supporter++</p> Discord role</li>
 					<li>Given Access to <b>All Cosmetic</b> and <b>All fast trackable kits</b> of their team</li>
 					<li>Access to #supporter-lounge, a place to hangout and chat with Alpine staff & other supporters!</li>
@@ -47,12 +49,12 @@
 					<li>Access to <b>Supporter Vault</b> <i>(64 slots)</i></li>
 					<li>Given <b>10x Paint Buckets</b> monthly</li>
 				</ul>
-				<button>Select This Plan</button>
+				<button onclick="keepplanopen('SXX', 'S')">Select This Plan</button>
 			</div>
 		</div>
 	</section>
 	<!--Main Content-->
-	<section class="info">
+	<section class="info" id="info">
 		
 	</section>
 	<!--footer-->
@@ -114,4 +116,5 @@
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="global.js"></script>
+<script src="supporter.js"></script>
 </body>

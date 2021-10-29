@@ -424,6 +424,19 @@ function showpaypal() {
 //	phptest.innerHTML = "FALSE"
 //}
 
+let steamidlink = document.getElementById("steamidlink");
+let steamidinfo = document.getElementById("steamtooltip");
+
+steamidlink.addEventListener("mouseenter", function(e) {
+steamidinfo.style.visibility = "visible";
+steamidinfo.style.opacity = "1";
+});
+
+steamidlink.addEventListener("mouseleave", function(e) {
+steamidinfo.style.opacity = "0";
+steamidinfo.style.visibility = "hidden";
+});
+
 function clearattention() {
 	steamid64.style = "";
 }
